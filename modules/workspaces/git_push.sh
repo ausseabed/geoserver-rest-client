@@ -13,7 +13,7 @@ if [ "$git_user_id" = "" ]; then
 fi
 
 if [ "$git_repo_id" = "" ]; then
-    git_repo_id="https://github.com/ausseabed/geoserver-rest-client#egg=version_subpkg\&subdirectory=modules/workspaces"
+    git_repo_id="ausseabed/geoserver-rest-client#egg=version_subpkg\&subdirectory=modules/workspaces"
     echo "[INFO] No command line input provided. Set \$git_repo_id to $git_repo_id"
 fi
 

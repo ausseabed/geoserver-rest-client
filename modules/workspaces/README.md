@@ -18,9 +18,9 @@ Python 2.7 and 3.4+
 If the python package is hosted on Github, you can install directly from Github
 
 ```sh
-pip install git+https://github.com/git/https://github.com/ausseabed/geoserver-rest-client#egg=version_subpkg\&subdirectory=modules/workspaces.git
+pip install git+https://github.com/git/ausseabed/geoserver-rest-client#egg=version_subpkg\&subdirectory=modules/workspaces.git
 ```
-(you may need to run `pip` with root permission: `sudo pip install git+https://github.com/git/https://github.com/ausseabed/geoserver-rest-client#egg=version_subpkg\&subdirectory=modules/workspaces.git`)
+(you may need to run `pip` with root permission: `sudo pip install git+https://github.com/git/ausseabed/geoserver-rest-client#egg=version_subpkg\&subdirectory=modules/workspaces.git`)
 
 Then import the package:
 ```python
