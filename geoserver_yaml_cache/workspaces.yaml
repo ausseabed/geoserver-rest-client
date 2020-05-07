@@ -216,8 +216,6 @@ paths:
 definitions:
   Workspace:
     title: Workspace
-    xml:
-      name: workspace
     type: object
     properties:
       workspace:
