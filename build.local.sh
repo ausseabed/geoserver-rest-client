@@ -10,7 +10,7 @@ do
    swagger-codegen generate -l python -i ../../geoserver_yaml_cache/$file \
    --model-package "model" \
    --git-user-id "ausseabed" \
-   --git-repo-id "geoserver-rest-client#egg=version_subpkg\&subdirectory=modules/$rootname" \
+   --git-repo-id "geoserver-rest-client.git#egg=version_subpkg\&subdirectory=modules/$rootname\&ignore=" \
    --additional-properties="packageName=gs_rest_api_$rootname,projectName=gs-rest-api-$rootname" 
     )
 done
