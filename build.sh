@@ -1,5 +1,5 @@
 #!/bin/bash
-for file in `cat modules.txt | grep workspaces`
+for file in `cat list_of_modules.txt | grep workspaces`
 do
 	rootname=`echo $file | sed "s/\..*//"` 
 	echo $rootname
