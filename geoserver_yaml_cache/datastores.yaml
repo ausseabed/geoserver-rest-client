@@ -231,8 +231,10 @@ paths:
       operationId: putDataStoreUpload
       summary:  Uploads files to the data store, creating it if necessary
       description: Creates or modifies a single data store by uploading spatial data or mapping configuration (in case an app-schema data store is targeted) files.
-      consumes:
-        - multipart/form-data
+      requestBody:
+        application/zip:
+          type: string
+          format: binary
       parameters:
         - name: workspaceName
           in: path
@@ -257,10 +259,6 @@ paths:
           required: true
           description: The type of source data store (e.g., "shp").
           type: string
-        - in: formData
-          name: upfile
-          type: file
-          description: The file to upload
         - name: configure
           in: query
           required: false
