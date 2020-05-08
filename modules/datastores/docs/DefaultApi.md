@@ -1097,7 +1097,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **put_data_store_upload**
-> put_data_store_upload(workspace_name, store_name, method, format, configure=configure, target=target, update=update, charset=charset, filename=filename)
+> put_data_store_upload(workspace_name, store_name, method, format, upfile=upfile, configure=configure, target=target, update=update, charset=charset, filename=filename)
 
 Uploads files to the data store, creating it if necessary
 
@@ -1117,6 +1117,7 @@ workspace_name = 'workspace_name_example' # str | The name of the worskpace cont
 store_name = 'store_name_example' # str | The name of the store to be retrieved
 method = 'method_example' # str | The upload method. Can be \"url\", \"file\", \"external\". \"file\" uploads a file from a local source. The body of the request is the file itself. \"url\" uploads a file from an remote source. The body of the request is a URL pointing to the file to upload. This URL must be visible from the server. \"external\" uses an existing file on the server. The body of the request is the absolute path to the existing file.
 format = 'format_example' # str | The type of source data store (e.g., \"shp\").
+upfile = 'upfile_example' # str |  (optional)
 configure = 'configure_example' # str | The configure parameter controls if a coverage/layer are configured upon file upload, in addition to creating the store. It can have a value of \"none\" to avoid configuring coverages. (optional)
 target = 'target_example' # str | The type of target data store (e.g., \"shp\"). Same as format if not provided. (optional)
 update = 'update_example' # str | The update mode. If \"overwrite\", will overwrite existing data. Otherwise, will append to existing data. (optional)
@@ -1125,7 +1126,7 @@ filename = 'filename_example' # str | The filename parameter specifies the targe
 
 try:
     # Uploads files to the data store, creating it if necessary
-    api_instance.put_data_store_upload(workspace_name, store_name, method, format, configure=configure, target=target, update=update, charset=charset, filename=filename)
+    api_instance.put_data_store_upload(workspace_name, store_name, method, format, upfile=upfile, configure=configure, target=target, update=update, charset=charset, filename=filename)
 except ApiException as e:
     print("Exception when calling DefaultApi->put_data_store_upload: %s\n" % e)
 ```
@@ -1138,6 +1139,7 @@ Name | Type | Description  | Notes
  **store_name** | **str**| The name of the store to be retrieved | 
  **method** | **str**| The upload method. Can be \&quot;url\&quot;, \&quot;file\&quot;, \&quot;external\&quot;. \&quot;file\&quot; uploads a file from a local source. The body of the request is the file itself. \&quot;url\&quot; uploads a file from an remote source. The body of the request is a URL pointing to the file to upload. This URL must be visible from the server. \&quot;external\&quot; uses an existing file on the server. The body of the request is the absolute path to the existing file. | 
  **format** | **str**| The type of source data store (e.g., \&quot;shp\&quot;). | 
+ **upfile** | **str**|  | [optional] 
  **configure** | **str**| The configure parameter controls if a coverage/layer are configured upon file upload, in addition to creating the store. It can have a value of \&quot;none\&quot; to avoid configuring coverages. | [optional] 
  **target** | **str**| The type of target data store (e.g., \&quot;shp\&quot;). Same as format if not provided. | [optional] 
  **update** | **str**| The update mode. If \&quot;overwrite\&quot;, will overwrite existing data. Otherwise, will append to existing data. | [optional] 
@@ -1154,7 +1156,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: multipart/form-data
  - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

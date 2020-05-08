@@ -1732,7 +1732,7 @@ Otherwise, the style body is an actual style:
             body_params = params['body']
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/xml', 'application/json', 'application/zip', 'application/vnd.ogc.sld+xml', 'application/vnd.ogc.se+xml'])  # noqa: E501
+            ['*/*'])  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501

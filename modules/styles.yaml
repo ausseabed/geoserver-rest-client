@@ -322,6 +322,12 @@ paths:
           type: string
           description: Content-Type of the style file. Used to determine style encoding when POSTing a style file (e.g. SLD or SE).
           required: false
+      consumes:
+        - application/xml
+        - application/json
+        - application/zip
+        - application/vnd.ogc.sld+xml
+        - application/vnd.ogc.se+xml
       responses:
         201:
           description: Created

@@ -1665,6 +1665,7 @@ The contents of the connection parameters will differ depending on the type of d
         :param str store_name: The name of the store to be retrieved (required)
         :param str method: The upload method. Can be \"url\", \"file\", \"external\". \"file\" uploads a file from a local source. The body of the request is the file itself. \"url\" uploads a file from an remote source. The body of the request is a URL pointing to the file to upload. This URL must be visible from the server. \"external\" uses an existing file on the server. The body of the request is the absolute path to the existing file. (required)
         :param str format: The type of source data store (e.g., \"shp\"). (required)
+        :param str upfile:
         :param str configure: The configure parameter controls if a coverage/layer are configured upon file upload, in addition to creating the store. It can have a value of \"none\" to avoid configuring coverages.
         :param str target: The type of target data store (e.g., \"shp\"). Same as format if not provided.
         :param str update: The update mode. If \"overwrite\", will overwrite existing data. Otherwise, will append to existing data.
@@ -1695,6 +1696,7 @@ The contents of the connection parameters will differ depending on the type of d
         :param str store_name: The name of the store to be retrieved (required)
         :param str method: The upload method. Can be \"url\", \"file\", \"external\". \"file\" uploads a file from a local source. The body of the request is the file itself. \"url\" uploads a file from an remote source. The body of the request is a URL pointing to the file to upload. This URL must be visible from the server. \"external\" uses an existing file on the server. The body of the request is the absolute path to the existing file. (required)
         :param str format: The type of source data store (e.g., \"shp\"). (required)
+        :param str upfile:
         :param str configure: The configure parameter controls if a coverage/layer are configured upon file upload, in addition to creating the store. It can have a value of \"none\" to avoid configuring coverages.
         :param str target: The type of target data store (e.g., \"shp\"). Same as format if not provided.
         :param str update: The update mode. If \"overwrite\", will overwrite existing data. Otherwise, will append to existing data.
@@ -1705,7 +1707,7 @@ The contents of the connection parameters will differ depending on the type of d
                  returns the request thread.
         """
 
-        all_params = ['workspace_name', 'store_name', 'method', 'format', 'configure', 'target', 'update', 'charset', 'filename']  # noqa: E501
+        all_params = ['workspace_name', 'store_name', 'method', 'format', 'upfile', 'configure', 'target', 'update', 'charset', 'filename']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1765,8 +1767,14 @@ The contents of the connection parameters will differ depending on the type of d
 
         form_params = []
         local_var_files = {}
+        if 'upfile' in params:
+            local_var_files['upfile'] = params['upfile']  # noqa: E501
 
         body_params = None
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['multipart/form-data'])  # noqa: E501
+
         # Authentication setting
         auth_settings = []  # noqa: E501
 
