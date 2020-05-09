@@ -15,12 +15,12 @@ from __future__ import absolute_import
 import unittest
 
 import gs_rest_api_datastores
-from model.workspace import Workspace  # noqa: E501
+from model.data_store_response import DataStoreResponse  # noqa: E501
 from gs_rest_api_datastores.rest import ApiException
 
 
-class TestWorkspace(unittest.TestCase):
-    """Workspace unit test stubs"""
+class TestDataStoreResponse(unittest.TestCase):
+    """DataStoreResponse unit test stubs"""
 
     def setUp(self):
         pass
@@ -28,10 +28,10 @@ class TestWorkspace(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testWorkspace(self):
-        """Test Workspace"""
+    def testDataStoreResponse(self):
+        """Test DataStoreResponse"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = gs_rest_api_datastores.models.workspace.Workspace()  # noqa: E501
+        # model = gs_rest_api_datastores.models.data_store_response.DataStoreResponse()  # noqa: E501
         pass
 
 

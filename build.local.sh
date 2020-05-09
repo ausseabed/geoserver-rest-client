@@ -7,7 +7,7 @@ do
 	echo $rootname
 	mkdir "$rootname"
 	 (cd $rootname; \
-   openapi-generator generate -g python -i ../../geoserver_yaml_cache/$file \
+   swagger-codegen generate -l python -i ../../geoserver_yaml_cache/$file \
    --model-package "model" \
    --git-user-id "ausseabed" \
    --git-repo-id "geoserver-rest-client.git#subdirectory=modules/$rootname\&ignore=" \
