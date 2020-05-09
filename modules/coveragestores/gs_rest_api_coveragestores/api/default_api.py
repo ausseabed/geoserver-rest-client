@@ -806,7 +806,7 @@ class DefaultApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param CoverageStoreInfo body: The coverage store body information to upload.
+        :param object body: The coverage store body information to upload.
 
 Examples:
 - application/xml:
@@ -851,7 +851,7 @@ Examples:
         >>> result = thread.get()
 
         :param async_req bool
-        :param CoverageStoreInfo body: The coverage store body information to upload.
+        :param object body: The coverage store body information to upload.
 
 Examples:
 - application/xml:
