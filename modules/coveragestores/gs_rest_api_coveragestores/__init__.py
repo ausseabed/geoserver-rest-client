@@ -21,4 +21,6 @@ from gs_rest_api_coveragestores.api_client import ApiClient
 from gs_rest_api_coveragestores.configuration import Configuration
 # import models into sdk package
 from gs_rest_api_coveragestores.model.coverage_store_info import CoverageStoreInfo
+from gs_rest_api_coveragestores.model.coverage_store_info_wrapper import CoverageStoreInfoWrapper
 from gs_rest_api_coveragestores.model.coverage_store_list import CoverageStoreList
+from gs_rest_api_coveragestores.model.coverage_store_list_item import CoverageStoreListItem

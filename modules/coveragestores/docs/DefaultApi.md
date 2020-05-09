@@ -155,7 +155,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_coverage_store**
-> CoverageStoreInfo get_coverage_store(workspace, store, quiet_on_not_found=quiet_on_not_found)
+> CoverageStoreInfoWrapper get_coverage_store(workspace, store, quiet_on_not_found=quiet_on_not_found)
 
 Get a coverage store named {store} in the {workspace} workspace
 
@@ -193,7 +193,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CoverageStoreInfo**](CoverageStoreInfo.md)
+[**CoverageStoreInfoWrapper**](CoverageStoreInfoWrapper.md)
 
 ### Authorization
 
@@ -411,7 +411,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = gs_rest_api_coveragestores.DefaultApi()
-body = gs_rest_api_coveragestores.CoverageStoreInfo() # CoverageStoreInfo | The coverage store body information to upload.
+body = gs_rest_api_coveragestores.CoverageStoreInfoWrapper() # CoverageStoreInfoWrapper | The coverage store body information to upload.
 
 Examples:
 - application/xml:
@@ -448,7 +448,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**CoverageStoreInfo**](CoverageStoreInfo.md)| The coverage store body information to upload.
+ **body** | [**CoverageStoreInfoWrapper**](CoverageStoreInfoWrapper.md)| The coverage store body information to upload.
 
 Examples:
 - application/xml:
@@ -505,7 +505,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = gs_rest_api_coveragestores.DefaultApi()
-body = gs_rest_api_coveragestores.CoverageStoreInfo() # CoverageStoreInfo | The coverage store body information to upload.
+body = gs_rest_api_coveragestores.CoverageStoreInfoWrapper() # CoverageStoreInfoWrapper | The coverage store body information to upload.
 For a PUT, only values which should be changed need to be included.
 
 Examples:
@@ -547,7 +547,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**CoverageStoreInfo**](CoverageStoreInfo.md)| The coverage store body information to upload.
+ **body** | [**CoverageStoreInfoWrapper**](CoverageStoreInfoWrapper.md)| The coverage store body information to upload.
 For a PUT, only values which should be changed need to be included.
 
 Examples:

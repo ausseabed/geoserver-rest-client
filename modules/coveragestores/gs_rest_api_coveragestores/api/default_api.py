@@ -318,7 +318,7 @@ class DefaultApi(object):
         :param str workspace: The name of the worskpace containing the coverage stores. (required)
         :param str store: The name of the store to be retrieved (required)
         :param bool quiet_on_not_found: When set to true, avoids to log an Exception when the coverage store is not present. Note that 404 status code will be returned anyway.
-        :return: CoverageStoreInfo
+        :return: CoverageStoreInfoWrapper
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -342,7 +342,7 @@ class DefaultApi(object):
         :param str workspace: The name of the worskpace containing the coverage stores. (required)
         :param str store: The name of the store to be retrieved (required)
         :param bool quiet_on_not_found: When set to true, avoids to log an Exception when the coverage store is not present. Note that 404 status code will be returned anyway.
-        :return: CoverageStoreInfo
+        :return: CoverageStoreInfoWrapper
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -404,7 +404,7 @@ class DefaultApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='CoverageStoreInfo',  # noqa: E501
+            response_type='CoverageStoreInfoWrapper',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -806,7 +806,7 @@ class DefaultApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param CoverageStoreInfo body: The coverage store body information to upload.
+        :param CoverageStoreInfoWrapper body: The coverage store body information to upload.
 
 Examples:
 - application/xml:
@@ -851,7 +851,7 @@ Examples:
         >>> result = thread.get()
 
         :param async_req bool
-        :param CoverageStoreInfo body: The coverage store body information to upload.
+        :param CoverageStoreInfoWrapper body: The coverage store body information to upload.
 
 Examples:
 - application/xml:
@@ -957,7 +957,7 @@ Examples:
         >>> result = thread.get()
 
         :param async_req bool
-        :param CoverageStoreInfo body: The coverage store body information to upload.
+        :param CoverageStoreInfoWrapper body: The coverage store body information to upload.
 For a PUT, only values which should be changed need to be included.
 
 Examples:
@@ -1008,7 +1008,7 @@ Examples:
         >>> result = thread.get()
 
         :param async_req bool
-        :param CoverageStoreInfo body: The coverage store body information to upload.
+        :param CoverageStoreInfoWrapper body: The coverage store body information to upload.
 For a PUT, only values which should be changed need to be included.
 
 Examples:

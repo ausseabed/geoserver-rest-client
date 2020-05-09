@@ -137,7 +137,7 @@ except ApiException as e:
 
 # create an instance of the API class
 api_instance = gs_rest_api_coveragestores.DefaultApi(gs_rest_api_coveragestores.ApiClient(configuration))
-body = gs_rest_api_coveragestores.CoverageStoreInfo() # CoverageStoreInfo | The coverage store body information to upload.
+body = gs_rest_api_coveragestores.CoverageStoreInfoWrapper() # CoverageStoreInfoWrapper | The coverage store body information to upload.
 
 Examples:
 - application/xml:
@@ -171,7 +171,7 @@ except ApiException as e:
 
 # create an instance of the API class
 api_instance = gs_rest_api_coveragestores.DefaultApi(gs_rest_api_coveragestores.ApiClient(configuration))
-body = gs_rest_api_coveragestores.CoverageStoreInfo() # CoverageStoreInfo | The coverage store body information to upload.
+body = gs_rest_api_coveragestores.CoverageStoreInfoWrapper() # CoverageStoreInfoWrapper | The coverage store body information to upload.
 For a PUT, only values which should be changed need to be included.
 
 Examples:
@@ -256,7 +256,9 @@ Class | Method | HTTP request | Description
 ## Documentation For Models
 
  - [CoverageStoreInfo](docs/CoverageStoreInfo.md)
+ - [CoverageStoreInfoWrapper](docs/CoverageStoreInfoWrapper.md)
  - [CoverageStoreList](docs/CoverageStoreList.md)
+ - [CoverageStoreListItem](docs/CoverageStoreListItem.md)
 
 ## Documentation For Authorization
 
