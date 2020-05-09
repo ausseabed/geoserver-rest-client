@@ -238,89 +238,6 @@ class DefaultApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def delete_data_store_upload(self, **kwargs):  # noqa: E501
-        """delete_data_store_upload  # noqa: E501
-
-        Invalid, only used for uploads  # noqa: E501
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.delete_data_store_upload(async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool
-        :return: None
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.delete_data_store_upload_with_http_info(**kwargs)  # noqa: E501
-        else:
-            (data) = self.delete_data_store_upload_with_http_info(**kwargs)  # noqa: E501
-            return data
-
-    def delete_data_store_upload_with_http_info(self, **kwargs):  # noqa: E501
-        """delete_data_store_upload  # noqa: E501
-
-        Invalid, only used for uploads  # noqa: E501
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.delete_data_store_upload_with_http_info(async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool
-        :return: None
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = []  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
-
-        params = locals()
-        for key, val in six.iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method delete_data_store_upload" % key
-                )
-            params[key] = val
-        del params['kwargs']
-
-        collection_formats = {}
-
-        path_params = {}
-
-        query_params = []
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-        # Authentication setting
-        auth_settings = []  # noqa: E501
-
-        return self.api_client.call_api(
-            '/workspaces/{workspaceName}/datastores/{storeName}/{method}.{format}', 'DELETE',
-            path_params,
-            query_params,
-            header_params,
-            body=body_params,
-            post_params=form_params,
-            files=local_var_files,
-            response_type=None,  # noqa: E501
-            auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
-
     def delete_datastore(self, workspace_name, store_name, **kwargs):  # noqa: E501
         """Delete data store  # noqa: E501
 
@@ -410,89 +327,6 @@ class DefaultApi(object):
 
         return self.api_client.call_api(
             '/workspaces/{workspaceName}/datastores/{storeName}', 'DELETE',
-            path_params,
-            query_params,
-            header_params,
-            body=body_params,
-            post_params=form_params,
-            files=local_var_files,
-            response_type=None,  # noqa: E501
-            auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
-
-    def deletedatastores(self, **kwargs):  # noqa: E501
-        """deletedatastores  # noqa: E501
-
-        Invalid. Use /datastores/{datastore} instead.  # noqa: E501
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.deletedatastores(async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool
-        :return: None
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.deletedatastores_with_http_info(**kwargs)  # noqa: E501
-        else:
-            (data) = self.deletedatastores_with_http_info(**kwargs)  # noqa: E501
-            return data
-
-    def deletedatastores_with_http_info(self, **kwargs):  # noqa: E501
-        """deletedatastores  # noqa: E501
-
-        Invalid. Use /datastores/{datastore} instead.  # noqa: E501
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.deletedatastores_with_http_info(async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool
-        :return: None
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = []  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
-
-        params = locals()
-        for key, val in six.iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method deletedatastores" % key
-                )
-            params[key] = val
-        del params['kwargs']
-
-        collection_formats = {}
-
-        path_params = {}
-
-        query_params = []
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-        # Authentication setting
-        auth_settings = []  # noqa: E501
-
-        return self.api_client.call_api(
-            '/workspaces/{workspaceName}/datastores', 'DELETE',
             path_params,
             query_params,
             header_params,
@@ -817,172 +651,6 @@ class DefaultApi(object):
             post_params=form_params,
             files=local_var_files,
             response_type='DataStoreResponse',  # noqa: E501
-            auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
-
-    def post_data_store_upload(self, **kwargs):  # noqa: E501
-        """post_data_store_upload  # noqa: E501
-
-        Invalid, use PUT for uploads  # noqa: E501
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.post_data_store_upload(async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool
-        :return: None
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.post_data_store_upload_with_http_info(**kwargs)  # noqa: E501
-        else:
-            (data) = self.post_data_store_upload_with_http_info(**kwargs)  # noqa: E501
-            return data
-
-    def post_data_store_upload_with_http_info(self, **kwargs):  # noqa: E501
-        """post_data_store_upload  # noqa: E501
-
-        Invalid, use PUT for uploads  # noqa: E501
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.post_data_store_upload_with_http_info(async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool
-        :return: None
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = []  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
-
-        params = locals()
-        for key, val in six.iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method post_data_store_upload" % key
-                )
-            params[key] = val
-        del params['kwargs']
-
-        collection_formats = {}
-
-        path_params = {}
-
-        query_params = []
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-        # Authentication setting
-        auth_settings = []  # noqa: E501
-
-        return self.api_client.call_api(
-            '/workspaces/{workspaceName}/datastores/{storeName}/{method}.{format}', 'POST',
-            path_params,
-            query_params,
-            header_params,
-            body=body_params,
-            post_params=form_params,
-            files=local_var_files,
-            response_type=None,  # noqa: E501
-            auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
-
-    def post_datastore(self, **kwargs):  # noqa: E501
-        """post_datastore  # noqa: E501
-
-        Invalid. Use PUT to edit a data store definition, or POST with /datastore to add a new definition.  # noqa: E501
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.post_datastore(async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool
-        :return: None
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.post_datastore_with_http_info(**kwargs)  # noqa: E501
-        else:
-            (data) = self.post_datastore_with_http_info(**kwargs)  # noqa: E501
-            return data
-
-    def post_datastore_with_http_info(self, **kwargs):  # noqa: E501
-        """post_datastore  # noqa: E501
-
-        Invalid. Use PUT to edit a data store definition, or POST with /datastore to add a new definition.  # noqa: E501
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.post_datastore_with_http_info(async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool
-        :return: None
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = []  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
-
-        params = locals()
-        for key, val in six.iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method post_datastore" % key
-                )
-            params[key] = val
-        del params['kwargs']
-
-        collection_formats = {}
-
-        path_params = {}
-
-        query_params = []
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-        # Authentication setting
-        auth_settings = []  # noqa: E501
-
-        return self.api_client.call_api(
-            '/workspaces/{workspaceName}/datastores/{storeName}', 'POST',
-            path_params,
-            query_params,
-            header_params,
-            body=body_params,
-            post_params=form_params,
-            files=local_var_files,
-            response_type=None,  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -1665,6 +1333,7 @@ The contents of the connection parameters will differ depending on the type of d
         :param str store_name: The name of the store to be retrieved (required)
         :param str method: The upload method. Can be \"url\", \"file\", \"external\". \"file\" uploads a file from a local source. The body of the request is the file itself. \"url\" uploads a file from an remote source. The body of the request is a URL pointing to the file to upload. This URL must be visible from the server. \"external\" uses an existing file on the server. The body of the request is the absolute path to the existing file. (required)
         :param str format: The type of source data store (e.g., \"shp\"). (required)
+        :param Object body:
         :param str configure: The configure parameter controls if a coverage/layer are configured upon file upload, in addition to creating the store. It can have a value of \"none\" to avoid configuring coverages.
         :param str target: The type of target data store (e.g., \"shp\"). Same as format if not provided.
         :param str update: The update mode. If \"overwrite\", will overwrite existing data. Otherwise, will append to existing data.
@@ -1695,6 +1364,7 @@ The contents of the connection parameters will differ depending on the type of d
         :param str store_name: The name of the store to be retrieved (required)
         :param str method: The upload method. Can be \"url\", \"file\", \"external\". \"file\" uploads a file from a local source. The body of the request is the file itself. \"url\" uploads a file from an remote source. The body of the request is a URL pointing to the file to upload. This URL must be visible from the server. \"external\" uses an existing file on the server. The body of the request is the absolute path to the existing file. (required)
         :param str format: The type of source data store (e.g., \"shp\"). (required)
+        :param Object body:
         :param str configure: The configure parameter controls if a coverage/layer are configured upon file upload, in addition to creating the store. It can have a value of \"none\" to avoid configuring coverages.
         :param str target: The type of target data store (e.g., \"shp\"). Same as format if not provided.
         :param str update: The update mode. If \"overwrite\", will overwrite existing data. Otherwise, will append to existing data.
@@ -1705,7 +1375,7 @@ The contents of the connection parameters will differ depending on the type of d
                  returns the request thread.
         """
 
-        all_params = ['workspace_name', 'store_name', 'method', 'format', 'configure', 'target', 'update', 'charset', 'filename']  # noqa: E501
+        all_params = ['workspace_name', 'store_name', 'method', 'format', 'body', 'configure', 'target', 'update', 'charset', 'filename']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1767,6 +1437,12 @@ The contents of the connection parameters will differ depending on the type of d
         local_var_files = {}
 
         body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/zip'])  # noqa: E501
+
         # Authentication setting
         auth_settings = []  # noqa: E501
 
@@ -2473,89 +2149,6 @@ The contents of the connection parameters will differ depending on the type of d
 
         return self.api_client.call_api(
             '/workspaces/{workspaceName}/datastores/{storeName}', 'PUT',
-            path_params,
-            query_params,
-            header_params,
-            body=body_params,
-            post_params=form_params,
-            files=local_var_files,
-            response_type=None,  # noqa: E501
-            auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
-
-    def putdatastores(self, **kwargs):  # noqa: E501
-        """putdatastores  # noqa: E501
-
-        Invalid. Use POST for adding a new data store, or PUT on /datastores/{datastore} to edit an existing data store.  # noqa: E501
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.putdatastores(async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool
-        :return: None
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.putdatastores_with_http_info(**kwargs)  # noqa: E501
-        else:
-            (data) = self.putdatastores_with_http_info(**kwargs)  # noqa: E501
-            return data
-
-    def putdatastores_with_http_info(self, **kwargs):  # noqa: E501
-        """putdatastores  # noqa: E501
-
-        Invalid. Use POST for adding a new data store, or PUT on /datastores/{datastore} to edit an existing data store.  # noqa: E501
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.putdatastores_with_http_info(async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool
-        :return: None
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = []  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
-
-        params = locals()
-        for key, val in six.iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method putdatastores" % key
-                )
-            params[key] = val
-        del params['kwargs']
-
-        collection_formats = {}
-
-        path_params = {}
-
-        query_params = []
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-        # Authentication setting
-        auth_settings = []  # noqa: E501
-
-        return self.api_client.call_api(
-            '/workspaces/{workspaceName}/datastores', 'PUT',
             path_params,
             query_params,
             header_params,

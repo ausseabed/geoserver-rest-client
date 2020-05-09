@@ -32,8 +32,8 @@ class Datastore(object):
         'name': 'str',
         'description': 'str',
         'enabled': 'bool',
-        'workspace': 'object',
-        'connection_parameters': 'list[object]',
+        'workspace': 'Workspace',
+        'connection_parameters': 'list[Entry]',
         'default': 'bool',
         'feature_types': 'list[str]'
     }
@@ -148,7 +148,7 @@ class Datastore(object):
 
 
         :return: The workspace of this Datastore.  # noqa: E501
-        :rtype: object
+        :rtype: Workspace
         """
         return self._workspace
 
@@ -158,7 +158,7 @@ class Datastore(object):
 
 
         :param workspace: The workspace of this Datastore.  # noqa: E501
-        :type: object
+        :type: Workspace
         """
 
         self._workspace = workspace
@@ -169,7 +169,7 @@ class Datastore(object):
 
 
         :return: The connection_parameters of this Datastore.  # noqa: E501
-        :rtype: list[object]
+        :rtype: list[Entry]
         """
         return self._connection_parameters
 
@@ -179,7 +179,7 @@ class Datastore(object):
 
 
         :param connection_parameters: The connection_parameters of this Datastore.  # noqa: E501
-        :type: list[object]
+        :type: list[Entry]
         """
 
         self._connection_parameters = connection_parameters

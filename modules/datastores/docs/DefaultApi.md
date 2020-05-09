@@ -6,18 +6,13 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**clean_all_mongo_schemas**](DefaultApi.md#clean_all_mongo_schemas) | **POST** /workspaces/{workspaceName}/appschemastores/{storeName}/cleanSchemas | Cleans all MongoDB internal stores Schemas for an App-Schema store.
 [**clean_mongo_schema**](DefaultApi.md#clean_mongo_schema) | **POST** /workspaces/{workspaceName}/appschemastores/{storeName}/datastores/{internalStoreId}/cleanSchemas | Cleans a MongoDB internal store Schemas for an App-Schema store.
-[**delete_data_store_upload**](DefaultApi.md#delete_data_store_upload) | **DELETE** /workspaces/{workspaceName}/datastores/{storeName}/{method}.{format} | 
 [**delete_datastore**](DefaultApi.md#delete_datastore) | **DELETE** /workspaces/{workspaceName}/datastores/{storeName} | Delete data store
-[**deletedatastores**](DefaultApi.md#deletedatastores) | **DELETE** /workspaces/{workspaceName}/datastores | 
 [**get_data_store**](DefaultApi.md#get_data_store) | **GET** /workspaces/{workspaceName}/datastores/{storeName} | Retrieve a particular data store from a workspace
 [**get_data_store_upload**](DefaultApi.md#get_data_store_upload) | **GET** /workspaces/{workspaceName}/datastores/{storeName}/{method}.{format} | 
 [**get_datastores**](DefaultApi.md#get_datastores) | **GET** /workspaces/{workspaceName}/datastores | Get a list of data stores
-[**post_data_store_upload**](DefaultApi.md#post_data_store_upload) | **POST** /workspaces/{workspaceName}/datastores/{storeName}/{method}.{format} | 
-[**post_datastore**](DefaultApi.md#post_datastore) | **POST** /workspaces/{workspaceName}/datastores/{storeName} | 
 [**post_datastores**](DefaultApi.md#post_datastores) | **POST** /workspaces/{workspaceName}/datastores | Create a new data store
 [**put_data_store_upload**](DefaultApi.md#put_data_store_upload) | **PUT** /workspaces/{workspaceName}/datastores/{storeName}/{method}.{format} | Uploads files to the data store, creating it if necessary
 [**put_datastore**](DefaultApi.md#put_datastore) | **PUT** /workspaces/{workspaceName}/datastores/{storeName} | Modify a data store.
-[**putdatastores**](DefaultApi.md#putdatastores) | **PUT** /workspaces/{workspaceName}/datastores | 
 [**rebuild_all_mongo_schemas**](DefaultApi.md#rebuild_all_mongo_schemas) | **POST** /workspaces/{workspaceName}/appschemastores/{storeName}/rebuildMongoSchemas | Rebuilds all MongoDB internal stores Schemas for an App-Schema store.
 [**rebuild_mongo_schema**](DefaultApi.md#rebuild_mongo_schema) | **POST** /workspaces/{workspaceName}/appschemastores/{storeName}/datastores/{internalStoreId}/rebuildMongoSchemas | Rebuilds a MongoDB internal store Schemas for an App-Schema store.
 
@@ -121,48 +116,6 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **delete_data_store_upload**
-> delete_data_store_upload()
-
-
-
-Invalid, only used for uploads
-
-### Example
-```python
-from __future__ import print_function
-import time
-import gs_rest_api_datastores
-from gs_rest_api_datastores.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = gs_rest_api_datastores.DefaultApi()
-
-try:
-    api_instance.delete_data_store_upload()
-except ApiException as e:
-    print("Exception when calling DefaultApi->delete_data_store_upload: %s\n" % e)
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **delete_datastore**
 > delete_datastore(workspace_name, store_name, recurse=recurse)
 
@@ -198,48 +151,6 @@ Name | Type | Description  | Notes
  **workspace_name** | **str**| The name of the worskpace containing the data store. | 
  **store_name** | **str**| The name of the data store to delete. | 
  **recurse** | **bool**| The recurse controls recursive deletion. When set to true all resources contained in the store are also removed. The default value is \&quot;false\&quot;. | [optional] 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **deletedatastores**
-> deletedatastores()
-
-
-
-Invalid. Use /datastores/{datastore} instead.
-
-### Example
-```python
-from __future__ import print_function
-import time
-import gs_rest_api_datastores
-from gs_rest_api_datastores.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = gs_rest_api_datastores.DefaultApi()
-
-try:
-    api_instance.deletedatastores()
-except ApiException as e:
-    print("Exception when calling DefaultApi->deletedatastores: %s\n" % e)
-```
-
-### Parameters
-This endpoint does not need any parameter.
 
 ### Return type
 
@@ -405,90 +316,6 @@ No authorization required
 
  - **Content-Type**: Not defined
  - **Accept**: application/xml, application/json, text/html
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **post_data_store_upload**
-> post_data_store_upload()
-
-
-
-Invalid, use PUT for uploads
-
-### Example
-```python
-from __future__ import print_function
-import time
-import gs_rest_api_datastores
-from gs_rest_api_datastores.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = gs_rest_api_datastores.DefaultApi()
-
-try:
-    api_instance.post_data_store_upload()
-except ApiException as e:
-    print("Exception when calling DefaultApi->post_data_store_upload: %s\n" % e)
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **post_datastore**
-> post_datastore()
-
-
-
-Invalid. Use PUT to edit a data store definition, or POST with /datastore to add a new definition.
-
-### Example
-```python
-from __future__ import print_function
-import time
-import gs_rest_api_datastores
-from gs_rest_api_datastores.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = gs_rest_api_datastores.DefaultApi()
-
-try:
-    api_instance.post_datastore()
-except ApiException as e:
-    print("Exception when calling DefaultApi->post_datastore: %s\n" % e)
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -1097,7 +924,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **put_data_store_upload**
-> put_data_store_upload(workspace_name, store_name, method, format, configure=configure, target=target, update=update, charset=charset, filename=filename)
+> put_data_store_upload(workspace_name, store_name, method, format, body=body, configure=configure, target=target, update=update, charset=charset, filename=filename)
 
 Uploads files to the data store, creating it if necessary
 
@@ -1117,6 +944,7 @@ workspace_name = 'workspace_name_example' # str | The name of the worskpace cont
 store_name = 'store_name_example' # str | The name of the store to be retrieved
 method = 'method_example' # str | The upload method. Can be \"url\", \"file\", \"external\". \"file\" uploads a file from a local source. The body of the request is the file itself. \"url\" uploads a file from an remote source. The body of the request is a URL pointing to the file to upload. This URL must be visible from the server. \"external\" uses an existing file on the server. The body of the request is the absolute path to the existing file.
 format = 'format_example' # str | The type of source data store (e.g., \"shp\").
+body = gs_rest_api_datastores.Object() # Object |  (optional)
 configure = 'configure_example' # str | The configure parameter controls if a coverage/layer are configured upon file upload, in addition to creating the store. It can have a value of \"none\" to avoid configuring coverages. (optional)
 target = 'target_example' # str | The type of target data store (e.g., \"shp\"). Same as format if not provided. (optional)
 update = 'update_example' # str | The update mode. If \"overwrite\", will overwrite existing data. Otherwise, will append to existing data. (optional)
@@ -1125,7 +953,7 @@ filename = 'filename_example' # str | The filename parameter specifies the targe
 
 try:
     # Uploads files to the data store, creating it if necessary
-    api_instance.put_data_store_upload(workspace_name, store_name, method, format, configure=configure, target=target, update=update, charset=charset, filename=filename)
+    api_instance.put_data_store_upload(workspace_name, store_name, method, format, body=body, configure=configure, target=target, update=update, charset=charset, filename=filename)
 except ApiException as e:
     print("Exception when calling DefaultApi->put_data_store_upload: %s\n" % e)
 ```
@@ -1138,6 +966,7 @@ Name | Type | Description  | Notes
  **store_name** | **str**| The name of the store to be retrieved | 
  **method** | **str**| The upload method. Can be \&quot;url\&quot;, \&quot;file\&quot;, \&quot;external\&quot;. \&quot;file\&quot; uploads a file from a local source. The body of the request is the file itself. \&quot;url\&quot; uploads a file from an remote source. The body of the request is a URL pointing to the file to upload. This URL must be visible from the server. \&quot;external\&quot; uses an existing file on the server. The body of the request is the absolute path to the existing file. | 
  **format** | **str**| The type of source data store (e.g., \&quot;shp\&quot;). | 
+ **body** | **Object**|  | [optional] 
  **configure** | **str**| The configure parameter controls if a coverage/layer are configured upon file upload, in addition to creating the store. It can have a value of \&quot;none\&quot; to avoid configuring coverages. | [optional] 
  **target** | **str**| The type of target data store (e.g., \&quot;shp\&quot;). Same as format if not provided. | [optional] 
  **update** | **str**| The update mode. If \&quot;overwrite\&quot;, will overwrite existing data. Otherwise, will append to existing data. | [optional] 
@@ -1154,7 +983,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/zip
  - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -1796,48 +1625,6 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/xml, application/json
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **putdatastores**
-> putdatastores()
-
-
-
-Invalid. Use POST for adding a new data store, or PUT on /datastores/{datastore} to edit an existing data store.
-
-### Example
-```python
-from __future__ import print_function
-import time
-import gs_rest_api_datastores
-from gs_rest_api_datastores.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = gs_rest_api_datastores.DefaultApi()
-
-try:
-    api_instance.putdatastores()
-except ApiException as e:
-    print("Exception when calling DefaultApi->putdatastores: %s\n" % e)
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
  - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

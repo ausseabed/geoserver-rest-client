@@ -42,22 +42,10 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
-    def test_delete_data_store_upload(self):
-        """Test case for delete_data_store_upload
-
-        """
-        pass
-
     def test_delete_datastore(self):
         """Test case for delete_datastore
 
         Delete data store  # noqa: E501
-        """
-        pass
-
-    def test_deletedatastores(self):
-        """Test case for deletedatastores
-
         """
         pass
 
@@ -81,18 +69,6 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
-    def test_post_data_store_upload(self):
-        """Test case for post_data_store_upload
-
-        """
-        pass
-
-    def test_post_datastore(self):
-        """Test case for post_datastore
-
-        """
-        pass
-
     def test_post_datastores(self):
         """Test case for post_datastores
 
@@ -111,12 +87,6 @@ class TestDefaultApi(unittest.TestCase):
         """Test case for put_datastore
 
         Modify a data store.  # noqa: E501
-        """
-        pass
-
-    def test_putdatastores(self):
-        """Test case for putdatastores
-
         """
         pass
 

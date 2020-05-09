@@ -77,14 +77,6 @@ except ApiException as e:
 
 # create an instance of the API class
 api_instance = gs_rest_api_datastores.DefaultApi(gs_rest_api_datastores.ApiClient(configuration))
-
-try:
-    api_instance.delete_data_store_upload()
-except ApiException as e:
-    print("Exception when calling DefaultApi->delete_data_store_upload: %s\n" % e)
-
-# create an instance of the API class
-api_instance = gs_rest_api_datastores.DefaultApi(gs_rest_api_datastores.ApiClient(configuration))
 workspace_name = 'workspace_name_example' # str | The name of the worskpace containing the data store.
 store_name = 'store_name_example' # str | The name of the data store to delete.
 recurse = true # bool | The recurse controls recursive deletion. When set to true all resources contained in the store are also removed. The default value is \"false\". (optional)
@@ -94,14 +86,6 @@ try:
     api_instance.delete_datastore(workspace_name, store_name, recurse=recurse)
 except ApiException as e:
     print("Exception when calling DefaultApi->delete_datastore: %s\n" % e)
-
-# create an instance of the API class
-api_instance = gs_rest_api_datastores.DefaultApi(gs_rest_api_datastores.ApiClient(configuration))
-
-try:
-    api_instance.deletedatastores()
-except ApiException as e:
-    print("Exception when calling DefaultApi->deletedatastores: %s\n" % e)
 
 # create an instance of the API class
 api_instance = gs_rest_api_datastores.DefaultApi(gs_rest_api_datastores.ApiClient(configuration))
@@ -138,22 +122,6 @@ try:
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling DefaultApi->get_datastores: %s\n" % e)
-
-# create an instance of the API class
-api_instance = gs_rest_api_datastores.DefaultApi(gs_rest_api_datastores.ApiClient(configuration))
-
-try:
-    api_instance.post_data_store_upload()
-except ApiException as e:
-    print("Exception when calling DefaultApi->post_data_store_upload: %s\n" % e)
-
-# create an instance of the API class
-api_instance = gs_rest_api_datastores.DefaultApi(gs_rest_api_datastores.ApiClient(configuration))
-
-try:
-    api_instance.post_datastore()
-except ApiException as e:
-    print("Exception when calling DefaultApi->post_datastore: %s\n" % e)
 
 # create an instance of the API class
 api_instance = gs_rest_api_datastores.DefaultApi(gs_rest_api_datastores.ApiClient(configuration))
@@ -450,6 +418,7 @@ workspace_name = 'workspace_name_example' # str | The name of the worskpace cont
 store_name = 'store_name_example' # str | The name of the store to be retrieved
 method = 'method_example' # str | The upload method. Can be \"url\", \"file\", \"external\". \"file\" uploads a file from a local source. The body of the request is the file itself. \"url\" uploads a file from an remote source. The body of the request is a URL pointing to the file to upload. This URL must be visible from the server. \"external\" uses an existing file on the server. The body of the request is the absolute path to the existing file.
 format = 'format_example' # str | The type of source data store (e.g., \"shp\").
+body = gs_rest_api_datastores.Object() # Object |  (optional)
 configure = 'configure_example' # str | The configure parameter controls if a coverage/layer are configured upon file upload, in addition to creating the store. It can have a value of \"none\" to avoid configuring coverages. (optional)
 target = 'target_example' # str | The type of target data store (e.g., \"shp\"). Same as format if not provided. (optional)
 update = 'update_example' # str | The update mode. If \"overwrite\", will overwrite existing data. Otherwise, will append to existing data. (optional)
@@ -458,7 +427,7 @@ filename = 'filename_example' # str | The filename parameter specifies the targe
 
 try:
     # Uploads files to the data store, creating it if necessary
-    api_instance.put_data_store_upload(workspace_name, store_name, method, format, configure=configure, target=target, update=update, charset=charset, filename=filename)
+    api_instance.put_data_store_upload(workspace_name, store_name, method, format, body=body, configure=configure, target=target, update=update, charset=charset, filename=filename)
 except ApiException as e:
     print("Exception when calling DefaultApi->put_data_store_upload: %s\n" % e)
 
@@ -771,14 +740,6 @@ except ApiException as e:
 
 # create an instance of the API class
 api_instance = gs_rest_api_datastores.DefaultApi(gs_rest_api_datastores.ApiClient(configuration))
-
-try:
-    api_instance.putdatastores()
-except ApiException as e:
-    print("Exception when calling DefaultApi->putdatastores: %s\n" % e)
-
-# create an instance of the API class
-api_instance = gs_rest_api_datastores.DefaultApi(gs_rest_api_datastores.ApiClient(configuration))
 workspace_name = 'workspace_name_example' # str | The name of the worskpace containing the data stores.
 store_name = 'store_name_example' # str | The name of the App-Schema store
 ids = 'ids_example' # str | Comma separated MongoDB object IDs for use in new generated schema. (optional)
@@ -814,18 +775,13 @@ Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *DefaultApi* | [**clean_all_mongo_schemas**](docs/DefaultApi.md#clean_all_mongo_schemas) | **POST** /workspaces/{workspaceName}/appschemastores/{storeName}/cleanSchemas | Cleans all MongoDB internal stores Schemas for an App-Schema store.
 *DefaultApi* | [**clean_mongo_schema**](docs/DefaultApi.md#clean_mongo_schema) | **POST** /workspaces/{workspaceName}/appschemastores/{storeName}/datastores/{internalStoreId}/cleanSchemas | Cleans a MongoDB internal store Schemas for an App-Schema store.
-*DefaultApi* | [**delete_data_store_upload**](docs/DefaultApi.md#delete_data_store_upload) | **DELETE** /workspaces/{workspaceName}/datastores/{storeName}/{method}.{format} | 
 *DefaultApi* | [**delete_datastore**](docs/DefaultApi.md#delete_datastore) | **DELETE** /workspaces/{workspaceName}/datastores/{storeName} | Delete data store
-*DefaultApi* | [**deletedatastores**](docs/DefaultApi.md#deletedatastores) | **DELETE** /workspaces/{workspaceName}/datastores | 
 *DefaultApi* | [**get_data_store**](docs/DefaultApi.md#get_data_store) | **GET** /workspaces/{workspaceName}/datastores/{storeName} | Retrieve a particular data store from a workspace
 *DefaultApi* | [**get_data_store_upload**](docs/DefaultApi.md#get_data_store_upload) | **GET** /workspaces/{workspaceName}/datastores/{storeName}/{method}.{format} | 
 *DefaultApi* | [**get_datastores**](docs/DefaultApi.md#get_datastores) | **GET** /workspaces/{workspaceName}/datastores | Get a list of data stores
-*DefaultApi* | [**post_data_store_upload**](docs/DefaultApi.md#post_data_store_upload) | **POST** /workspaces/{workspaceName}/datastores/{storeName}/{method}.{format} | 
-*DefaultApi* | [**post_datastore**](docs/DefaultApi.md#post_datastore) | **POST** /workspaces/{workspaceName}/datastores/{storeName} | 
 *DefaultApi* | [**post_datastores**](docs/DefaultApi.md#post_datastores) | **POST** /workspaces/{workspaceName}/datastores | Create a new data store
 *DefaultApi* | [**put_data_store_upload**](docs/DefaultApi.md#put_data_store_upload) | **PUT** /workspaces/{workspaceName}/datastores/{storeName}/{method}.{format} | Uploads files to the data store, creating it if necessary
 *DefaultApi* | [**put_datastore**](docs/DefaultApi.md#put_datastore) | **PUT** /workspaces/{workspaceName}/datastores/{storeName} | Modify a data store.
-*DefaultApi* | [**putdatastores**](docs/DefaultApi.md#putdatastores) | **PUT** /workspaces/{workspaceName}/datastores | 
 *DefaultApi* | [**rebuild_all_mongo_schemas**](docs/DefaultApi.md#rebuild_all_mongo_schemas) | **POST** /workspaces/{workspaceName}/appschemastores/{storeName}/rebuildMongoSchemas | Rebuilds all MongoDB internal stores Schemas for an App-Schema store.
 *DefaultApi* | [**rebuild_mongo_schema**](docs/DefaultApi.md#rebuild_mongo_schema) | **POST** /workspaces/{workspaceName}/appschemastores/{storeName}/datastores/{internalStoreId}/rebuildMongoSchemas | Rebuilds a MongoDB internal store Schemas for an App-Schema store.
 
@@ -833,6 +789,9 @@ Class | Method | HTTP request | Description
 
  - [DataStoreResponse](docs/DataStoreResponse.md)
  - [Datastore](docs/Datastore.md)
+ - [Datastore1](docs/Datastore1.md)
+ - [Entry](docs/Entry.md)
+ - [Workspace](docs/Workspace.md)
 
 ## Documentation For Authorization
 
