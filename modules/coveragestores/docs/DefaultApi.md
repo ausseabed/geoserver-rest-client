@@ -411,7 +411,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = gs_rest_api_coveragestores.DefaultApi()
-body = gs_rest_api_coveragestores.CoverageStoreInfo() # CoverageStoreInfo | The coverage store body information to upload.
+body = NULL # object | The coverage store body information to upload.
 
 Examples:
 - application/xml:
@@ -448,7 +448,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**CoverageStoreInfo**](CoverageStoreInfo.md)| The coverage store body information to upload.
+ **body** | [**object**](object.md)| The coverage store body information to upload.
 
 Examples:
 - application/xml:
@@ -505,7 +505,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = gs_rest_api_coveragestores.DefaultApi()
-body = NULL # object | The coverage store body information to upload.
+body = gs_rest_api_coveragestores.CoverageStoreInfo() # CoverageStoreInfo | The coverage store body information to upload.
 For a PUT, only values which should be changed need to be included.
 
 Examples:
@@ -547,7 +547,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**object**](object.md)| The coverage store body information to upload.
+ **body** | [**CoverageStoreInfo**](CoverageStoreInfo.md)| The coverage store body information to upload.
 For a PUT, only values which should be changed need to be included.
 
 Examples:

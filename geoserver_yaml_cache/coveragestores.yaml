@@ -391,7 +391,8 @@ parameters:
     in: body
     required: true          
     schema:
-      $ref: "#/definitions/CoverageStoreInfo"
+      coverageStore:
+        $ref: "#/definitions/CoverageStoreInfo"
   CoverageStorePut:
     name: coverageStoreBody
     description: |
@@ -425,8 +426,7 @@ parameters:
     in: body
     required: true          
     schema:
-      coverageStore:
-        $ref: "#/definitions/CoverageStoreInfo"
+      $ref: "#/definitions/CoverageStoreInfo"
           
 definitions:
   CoverageStoreInfo:
