@@ -431,7 +431,9 @@ definitions:
   CoverageStoreInfoWrapper:
     type: object
     properties:
-      $ref: "#definitions/CoverageStoreInfo"
+      coverageStore:
+        type: object
+        $ref: "#definitions/CoverageStoreInfo"
 
   CoverageStoreInfo:
     type: object

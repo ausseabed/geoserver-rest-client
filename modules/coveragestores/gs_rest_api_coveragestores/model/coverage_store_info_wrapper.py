@@ -29,14 +29,40 @@ class CoverageStoreInfoWrapper(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'coverage_store': 'DefinitionsCoverageStoreInfo'
     }
 
     attribute_map = {
+        'coverage_store': 'coverageStore'
     }
 
-    def __init__(self):  # noqa: E501
+    def __init__(self, coverage_store=None):  # noqa: E501
         """CoverageStoreInfoWrapper - a model defined in Swagger"""  # noqa: E501
+        self._coverage_store = None
         self.discriminator = None
+        if coverage_store is not None:
+            self.coverage_store = coverage_store
+
+    @property
+    def coverage_store(self):
+        """Gets the coverage_store of this CoverageStoreInfoWrapper.  # noqa: E501
+
+
+        :return: The coverage_store of this CoverageStoreInfoWrapper.  # noqa: E501
+        :rtype: DefinitionsCoverageStoreInfo
+        """
+        return self._coverage_store
+
+    @coverage_store.setter
+    def coverage_store(self, coverage_store):
+        """Sets the coverage_store of this CoverageStoreInfoWrapper.
+
+
+        :param coverage_store: The coverage_store of this CoverageStoreInfoWrapper.  # noqa: E501
+        :type: DefinitionsCoverageStoreInfo
+        """
+
+        self._coverage_store = coverage_store
 
     def to_dict(self):
         """Returns the model properties as a dict"""
