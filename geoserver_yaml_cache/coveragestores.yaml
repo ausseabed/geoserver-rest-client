@@ -388,7 +388,7 @@ parameters:
         ```
 
 
-    in: query
+    in: body
     required: true          
     schema:
       $ref: "#/definitions/CoverageStoreInfo"
@@ -422,7 +422,7 @@ parameters:
           }
         }
         ```
-    in: query
+    in: body
     required: true          
     schema:
       $ref: "#/definitions/CoverageStoreInfo"
