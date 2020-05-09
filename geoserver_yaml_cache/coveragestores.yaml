@@ -425,7 +425,8 @@ parameters:
     in: body
     required: true          
     schema:
-      $ref: "#/definitions/CoverageStoreInfo"
+      coverageStore:
+        $ref: "#/definitions/CoverageStoreInfo"
           
 definitions:
   CoverageStoreInfo:

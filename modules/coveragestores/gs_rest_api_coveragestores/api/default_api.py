@@ -957,7 +957,7 @@ Examples:
         >>> result = thread.get()
 
         :param async_req bool
-        :param CoverageStoreInfo body: The coverage store body information to upload.
+        :param object body: The coverage store body information to upload.
 For a PUT, only values which should be changed need to be included.
 
 Examples:
@@ -1008,7 +1008,7 @@ Examples:
         >>> result = thread.get()
 
         :param async_req bool
-        :param CoverageStoreInfo body: The coverage store body information to upload.
+        :param object body: The coverage store body information to upload.
 For a PUT, only values which should be changed need to be included.
 
 Examples:
