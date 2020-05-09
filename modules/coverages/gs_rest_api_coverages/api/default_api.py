@@ -913,7 +913,7 @@ class DefaultApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param CoverageInfo body: The body of the coverage to POST (required)
+        :param CoverageInfoWrapper body: The body of the coverage to POST (required)
         :param str workspace: The name of the workspace (required)
         :return: None
                  If the method is called asynchronously,
@@ -936,7 +936,7 @@ class DefaultApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param CoverageInfo body: The body of the coverage to POST (required)
+        :param CoverageInfoWrapper body: The body of the coverage to POST (required)
         :param str workspace: The name of the workspace (required)
         :return: None
                  If the method is called asynchronously,
@@ -1099,7 +1099,7 @@ class DefaultApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param CoverageInfo body: The body of the coverage to POST (required)
+        :param CoverageInfoWrapper body: The body of the coverage to POST (required)
         :param str workspace: The name of the workspace (required)
         :param str store: The name of the coverage data store (required)
         :return: None
@@ -1123,7 +1123,7 @@ class DefaultApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param CoverageInfo body: The body of the coverage to POST (required)
+        :param CoverageInfoWrapper body: The body of the coverage to POST (required)
         :param str workspace: The name of the workspace (required)
         :param str store: The name of the coverage data store (required)
         :return: None
@@ -1376,7 +1376,7 @@ class DefaultApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param CoverageInfo body: The body of the coverage to PUT (required)
+        :param CoverageInfoWrapper body: The body of the coverage to PUT (required)
         :param str workspace: The name of the workspace (required)
         :param str store: The name of the coverage data store (required)
         :param str coverage: The name of the coverage (required)
@@ -1402,7 +1402,7 @@ class DefaultApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param CoverageInfo body: The body of the coverage to PUT (required)
+        :param CoverageInfoWrapper body: The body of the coverage to PUT (required)
         :param str workspace: The name of the workspace (required)
         :param str store: The name of the coverage data store (required)
         :param str coverage: The name of the coverage (required)

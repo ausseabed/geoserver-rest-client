@@ -21,4 +21,5 @@ from gs_rest_api_coverages.api_client import ApiClient
 from gs_rest_api_coverages.configuration import Configuration
 # import models into sdk package
 from gs_rest_api_coverages.model.coverage_info import CoverageInfo
+from gs_rest_api_coverages.model.coverage_info_wrapper import CoverageInfoWrapper
 from gs_rest_api_coverages.model.metadata_entry import MetadataEntry

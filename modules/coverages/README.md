@@ -146,7 +146,7 @@ except ApiException as e:
 
 # create an instance of the API class
 api_instance = gs_rest_api_coverages.DefaultApi(gs_rest_api_coverages.ApiClient(configuration))
-body = gs_rest_api_coverages.CoverageInfo() # CoverageInfo | The body of the coverage to POST
+body = gs_rest_api_coverages.CoverageInfoWrapper() # CoverageInfoWrapper | The body of the coverage to POST
 workspace = 'workspace_example' # str | The name of the workspace
 
 try:
@@ -164,7 +164,7 @@ except ApiException as e:
 
 # create an instance of the API class
 api_instance = gs_rest_api_coverages.DefaultApi(gs_rest_api_coverages.ApiClient(configuration))
-body = gs_rest_api_coverages.CoverageInfo() # CoverageInfo | The body of the coverage to POST
+body = gs_rest_api_coverages.CoverageInfoWrapper() # CoverageInfoWrapper | The body of the coverage to POST
 workspace = 'workspace_example' # str | The name of the workspace
 store = 'store_example' # str | The name of the coverage data store
 
@@ -191,7 +191,7 @@ except ApiException as e:
 
 # create an instance of the API class
 api_instance = gs_rest_api_coverages.DefaultApi(gs_rest_api_coverages.ApiClient(configuration))
-body = gs_rest_api_coverages.CoverageInfo() # CoverageInfo | The body of the coverage to PUT
+body = gs_rest_api_coverages.CoverageInfoWrapper() # CoverageInfoWrapper | The body of the coverage to PUT
 workspace = 'workspace_example' # str | The name of the workspace
 store = 'store_example' # str | The name of the coverage data store
 coverage = 'coverage_example' # str | The name of the coverage
@@ -237,6 +237,7 @@ Class | Method | HTTP request | Description
 ## Documentation For Models
 
  - [CoverageInfo](docs/CoverageInfo.md)
+ - [CoverageInfoWrapper](docs/CoverageInfoWrapper.md)
  - [MetadataEntry](docs/MetadataEntry.md)
 
 ## Documentation For Authorization

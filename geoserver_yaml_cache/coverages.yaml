@@ -99,7 +99,7 @@ paths:
           description: The body of the coverage to POST
           required: true
           schema:
-            $ref: "#/definitions/CoverageInfo"
+            $ref: "#/definitions/CoverageInfoWrapper"
       responses:
         201:
           description: The coverage was successfully created.
@@ -197,7 +197,7 @@ paths:
             description: The body of the coverage to POST
             required: true
             schema:
-              $ref: "#/definitions/CoverageInfo"
+              $ref: "#/definitions/CoverageInfoWrapper"
         responses:
           201:
             description: The coverage was successfully created.
@@ -250,7 +250,7 @@ paths:
               type: object
               properties:
                 featureType:
-                  $ref: "#/definitions/CoverageInfo"
+                  $ref: "#/definitions/CoverageInfoWrapper"
             examples:
               application/json: |
                 {
@@ -549,7 +549,7 @@ paths:
             type: object
             properties:
               featureType:              
-                $ref: "#/definitions/CoverageInfo"
+                $ref: "#/definitions/CoverageInfoWrapper"
           examples:
             application/json: {
                               "coverage": {
@@ -826,7 +826,7 @@ paths:
           description: The body of the coverage to PUT
           required: true
           schema:
-            $ref: "#/definitions/CoverageInfo"
+            $ref: "#/definitions/CoverageInfoWrapper"
         - name: calculate
           in: query
           description: 'Comma-seperated list of optional fields to calculate. Optional fields include: "nativebbox", "latlonbbox".'
@@ -871,6 +871,12 @@ paths:
           description: Successfully deleted.
 
 definitions:
+  CoverageInfoWrapper:
+    type: object
+    properties:
+      coverage:
+        type: object
+        $ref: "#/definitions/CoverageInfo"
   CoverageInfo:
     type: object
     properties:

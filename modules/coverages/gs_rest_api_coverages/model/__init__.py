@@ -15,4 +15,5 @@ from __future__ import absolute_import
 
 # import models into model package
 from gs_rest_api_coverages.model.coverage_info import CoverageInfo
+from gs_rest_api_coverages.model.coverage_info_wrapper import CoverageInfoWrapper
 from gs_rest_api_coverages.model.metadata_entry import MetadataEntry

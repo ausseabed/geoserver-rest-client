@@ -462,7 +462,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = gs_rest_api_coverages.DefaultApi()
-body = gs_rest_api_coverages.CoverageInfo() # CoverageInfo | The body of the coverage to POST
+body = gs_rest_api_coverages.CoverageInfoWrapper() # CoverageInfoWrapper | The body of the coverage to POST
 workspace = 'workspace_example' # str | The name of the workspace
 
 try:
@@ -475,7 +475,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**CoverageInfo**](CoverageInfo.md)| The body of the coverage to POST | 
+ **body** | [**CoverageInfoWrapper**](CoverageInfoWrapper.md)| The body of the coverage to POST | 
  **workspace** | **str**| The name of the workspace | 
 
 ### Return type
@@ -552,7 +552,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = gs_rest_api_coverages.DefaultApi()
-body = gs_rest_api_coverages.CoverageInfo() # CoverageInfo | The body of the coverage to POST
+body = gs_rest_api_coverages.CoverageInfoWrapper() # CoverageInfoWrapper | The body of the coverage to POST
 workspace = 'workspace_example' # str | The name of the workspace
 store = 'store_example' # str | The name of the coverage data store
 
@@ -566,7 +566,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**CoverageInfo**](CoverageInfo.md)| The body of the coverage to POST | 
+ **body** | [**CoverageInfoWrapper**](CoverageInfoWrapper.md)| The body of the coverage to POST | 
  **workspace** | **str**| The name of the workspace | 
  **store** | **str**| The name of the coverage data store | 
 
@@ -686,7 +686,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = gs_rest_api_coverages.DefaultApi()
-body = gs_rest_api_coverages.CoverageInfo() # CoverageInfo | The body of the coverage to PUT
+body = gs_rest_api_coverages.CoverageInfoWrapper() # CoverageInfoWrapper | The body of the coverage to PUT
 workspace = 'workspace_example' # str | The name of the workspace
 store = 'store_example' # str | The name of the coverage data store
 coverage = 'coverage_example' # str | The name of the coverage
@@ -702,7 +702,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**CoverageInfo**](CoverageInfo.md)| The body of the coverage to PUT | 
+ **body** | [**CoverageInfoWrapper**](CoverageInfoWrapper.md)| The body of the coverage to PUT | 
  **workspace** | **str**| The name of the workspace | 
  **store** | **str**| The name of the coverage data store | 
  **coverage** | **str**| The name of the coverage | 
