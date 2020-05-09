@@ -395,7 +395,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **post_coverage_stores**
-> str post_coverage_stores(body, workspace)
+> str post_coverage_stores(workspace, coverage_store_body)
 
 Add a new coverage store
 
@@ -411,34 +411,12 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = gs_rest_api_coveragestores.DefaultApi()
-body = gs_rest_api_coveragestores.CoverageStoreInfo() # CoverageStoreInfo | The coverage store body information to upload.
-
-Examples:
-- application/xml:
-
-  ```
-  <coverageStore>
-    <name>nyc</name>
-    <url>file:/path/to/file.tiff</url>
-  </coverageStore>
-  ```
-
-- application/json:
-
-  ```
-  {
-    "coverageStore": {
-      "name": "nyc",
-      "url": "file:/path/to/file.tiff"
-    }
-  }
-  ```
-
 workspace = 'workspace_example' # str | The name of the worskpace containing the coverage stores.
+coverage_store_body = gs_rest_api_coveragestores.Object() # Object | The coverage store body information to upload.  Examples: - application/xml:    ```   <coverageStore>     <name>nyc</name>     <url>file:/path/to/file.tiff</url>   </coverageStore>   ```  - application/json:    ```   {     \"coverageStore\": {       \"name\": \"nyc\",       \"url\": \"file:/path/to/file.tiff\"     }   }   ``` 
 
 try:
     # Add a new coverage store
-    api_response = api_instance.post_coverage_stores(body, workspace)
+    api_response = api_instance.post_coverage_stores(workspace, coverage_store_body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling DefaultApi->post_coverage_stores: %s\n" % e)
@@ -448,30 +426,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**CoverageStoreInfo**](CoverageStoreInfo.md)| The coverage store body information to upload.
-
-Examples:
-- application/xml:
-
-  &#x60;&#x60;&#x60;
-  &lt;coverageStore&gt;
-    &lt;name&gt;nyc&lt;/name&gt;
-    &lt;url&gt;file:/path/to/file.tiff&lt;/url&gt;
-  &lt;/coverageStore&gt;
-  &#x60;&#x60;&#x60;
-
-- application/json:
-
-  &#x60;&#x60;&#x60;
-  {
-    &quot;coverageStore&quot;: {
-      &quot;name&quot;: &quot;nyc&quot;,
-      &quot;url&quot;: &quot;file:/path/to/file.tiff&quot;
-    }
-  }
-  &#x60;&#x60;&#x60;
- | 
  **workspace** | **str**| The name of the worskpace containing the coverage stores. | 
+ **coverage_store_body** | [**Object**](.md)| The coverage store body information to upload.  Examples: - application/xml:    &#x60;&#x60;&#x60;   &lt;coverageStore&gt;     &lt;name&gt;nyc&lt;/name&gt;     &lt;url&gt;file:/path/to/file.tiff&lt;/url&gt;   &lt;/coverageStore&gt;   &#x60;&#x60;&#x60;  - application/json:    &#x60;&#x60;&#x60;   {     \&quot;coverageStore\&quot;: {       \&quot;name\&quot;: \&quot;nyc\&quot;,       \&quot;url\&quot;: \&quot;file:/path/to/file.tiff\&quot;     }   }   &#x60;&#x60;&#x60;  | 
 
 ### Return type
 
@@ -483,7 +439,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/xml, application/json
+ - **Content-Type**: Not defined
  - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

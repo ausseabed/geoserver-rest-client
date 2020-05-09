@@ -388,7 +388,7 @@ parameters:
         ```
 
 
-    in: body
+    in: query
     required: true          
     schema:
       $ref: "#/definitions/CoverageStoreInfo"

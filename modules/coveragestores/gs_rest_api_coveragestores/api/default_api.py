@@ -796,91 +796,47 @@ class DefaultApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def post_coverage_stores(self, body, workspace, **kwargs):  # noqa: E501
+    def post_coverage_stores(self, workspace, coverage_store_body, **kwargs):  # noqa: E501
         """Add a new coverage store  # noqa: E501
 
         Adds a new coverage store entry to the server.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.post_coverage_stores(body, workspace, async_req=True)
+        >>> thread = api.post_coverage_stores(workspace, coverage_store_body, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param CoverageStoreInfo body: The coverage store body information to upload.
-
-Examples:
-- application/xml:
-
-  ```
-  <coverageStore>
-    <name>nyc</name>
-    <url>file:/path/to/file.tiff</url>
-  </coverageStore>
-  ```
-
-- application/json:
-
-  ```
-  {
-    "coverageStore": {
-      "name": "nyc",
-      "url": "file:/path/to/file.tiff"
-    }
-  }
-  ```
- (required)
         :param str workspace: The name of the worskpace containing the coverage stores. (required)
+        :param Object coverage_store_body: The coverage store body information to upload.  Examples: - application/xml:    ```   <coverageStore>     <name>nyc</name>     <url>file:/path/to/file.tiff</url>   </coverageStore>   ```  - application/json:    ```   {     \"coverageStore\": {       \"name\": \"nyc\",       \"url\": \"file:/path/to/file.tiff\"     }   }   ```  (required)
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.post_coverage_stores_with_http_info(body, workspace, **kwargs)  # noqa: E501
+            return self.post_coverage_stores_with_http_info(workspace, coverage_store_body, **kwargs)  # noqa: E501
         else:
-            (data) = self.post_coverage_stores_with_http_info(body, workspace, **kwargs)  # noqa: E501
+            (data) = self.post_coverage_stores_with_http_info(workspace, coverage_store_body, **kwargs)  # noqa: E501
             return data
 
-    def post_coverage_stores_with_http_info(self, body, workspace, **kwargs):  # noqa: E501
+    def post_coverage_stores_with_http_info(self, workspace, coverage_store_body, **kwargs):  # noqa: E501
         """Add a new coverage store  # noqa: E501
 
         Adds a new coverage store entry to the server.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.post_coverage_stores_with_http_info(body, workspace, async_req=True)
+        >>> thread = api.post_coverage_stores_with_http_info(workspace, coverage_store_body, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param CoverageStoreInfo body: The coverage store body information to upload.
-
-Examples:
-- application/xml:
-
-  ```
-  <coverageStore>
-    <name>nyc</name>
-    <url>file:/path/to/file.tiff</url>
-  </coverageStore>
-  ```
-
-- application/json:
-
-  ```
-  {
-    "coverageStore": {
-      "name": "nyc",
-      "url": "file:/path/to/file.tiff"
-    }
-  }
-  ```
- (required)
         :param str workspace: The name of the worskpace containing the coverage stores. (required)
+        :param Object coverage_store_body: The coverage store body information to upload.  Examples: - application/xml:    ```   <coverageStore>     <name>nyc</name>     <url>file:/path/to/file.tiff</url>   </coverageStore>   ```  - application/json:    ```   {     \"coverageStore\": {       \"name\": \"nyc\",       \"url\": \"file:/path/to/file.tiff\"     }   }   ```  (required)
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['body', 'workspace']  # noqa: E501
+        all_params = ['workspace', 'coverage_store_body']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -895,14 +851,14 @@ Examples:
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'body' is set
-        if ('body' not in params or
-                params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `post_coverage_stores`")  # noqa: E501
         # verify the required parameter 'workspace' is set
         if ('workspace' not in params or
                 params['workspace'] is None):
             raise ValueError("Missing the required parameter `workspace` when calling `post_coverage_stores`")  # noqa: E501
+        # verify the required parameter 'coverage_store_body' is set
+        if ('coverage_store_body' not in params or
+                params['coverage_store_body'] is None):
+            raise ValueError("Missing the required parameter `coverage_store_body` when calling `post_coverage_stores`")  # noqa: E501
 
         collection_formats = {}
 
@@ -911,6 +867,8 @@ Examples:
             path_params['workspace'] = params['workspace']  # noqa: E501
 
         query_params = []
+        if 'coverage_store_body' in params:
+            query_params.append(('coverageStoreBody', params['coverage_store_body']))  # noqa: E501
 
         header_params = {}
 
@@ -918,15 +876,9 @@ Examples:
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
             ['*/*'])  # noqa: E501
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/xml', 'application/json'])  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501

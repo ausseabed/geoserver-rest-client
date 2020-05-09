@@ -137,34 +137,12 @@ except ApiException as e:
 
 # create an instance of the API class
 api_instance = gs_rest_api_coveragestores.DefaultApi(gs_rest_api_coveragestores.ApiClient(configuration))
-body = gs_rest_api_coveragestores.CoverageStoreInfo() # CoverageStoreInfo | The coverage store body information to upload.
-
-Examples:
-- application/xml:
-
-  ```
-  <coverageStore>
-    <name>nyc</name>
-    <url>file:/path/to/file.tiff</url>
-  </coverageStore>
-  ```
-
-- application/json:
-
-  ```
-  {
-    "coverageStore": {
-      "name": "nyc",
-      "url": "file:/path/to/file.tiff"
-    }
-  }
-  ```
-
 workspace = 'workspace_example' # str | The name of the worskpace containing the coverage stores.
+coverage_store_body = gs_rest_api_coveragestores.Object() # Object | The coverage store body information to upload.  Examples: - application/xml:    ```   <coverageStore>     <name>nyc</name>     <url>file:/path/to/file.tiff</url>   </coverageStore>   ```  - application/json:    ```   {     \"coverageStore\": {       \"name\": \"nyc\",       \"url\": \"file:/path/to/file.tiff\"     }   }   ``` 
 
 try:
     # Add a new coverage store
-    api_response = api_instance.post_coverage_stores(body, workspace)
+    api_response = api_instance.post_coverage_stores(workspace, coverage_store_body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling DefaultApi->post_coverage_stores: %s\n" % e)
