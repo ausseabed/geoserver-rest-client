@@ -899,103 +899,49 @@ class DefaultApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def put_coverage_store(self, body, workspace, store, **kwargs):  # noqa: E501
+    def put_coverage_store(self, workspace, store, coverage_store_body, **kwargs):  # noqa: E501
         """Modify a single coverage store.  # noqa: E501
 
         Modifies a single coverage store. Use the \"Accept:\" header to specify format or append an extension to the endpoint (example \"{store}.xml\" for XML).  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.put_coverage_store(body, workspace, store, async_req=True)
+        >>> thread = api.put_coverage_store(workspace, store, coverage_store_body, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param CoverageStoreInfo body: The coverage store body information to upload.
-For a PUT, only values which should be changed need to be included.
-
-Examples:
-- application/xml:
-
-  ```
-  <coverageStore>
-    <description>A coverage store</description>
-    <enabled>true</enabled>
-    <__default>true</__default>
-    <url>file:/path/to/file.tiff</url>
-  </coverageStore>
-  ```
-
-- application/json:
-
-  ```
-  {
-    "coverageStore": {
-      "description": "A coverage store",
-      "enabled": "true",
-      "_default": "true",
-      "url": "file:/path/to/file.tiff"
-    }
-  }
-  ```
- (required)
         :param str workspace: The name of the worskpace containing the coverage stores. (required)
         :param str store: The name of the store to be retrieved (required)
+        :param Object coverage_store_body: The coverage store body information to upload. For a PUT, only values which should be changed need to be included.  Examples: - application/xml:    ```   <coverageStore>     <description>A coverage store</description>     <enabled>true</enabled>     <__default>true</__default>     <url>file:/path/to/file.tiff</url>   </coverageStore>   ```  - application/json:    ```   {     \"coverageStore\": {       \"description\": \"A coverage store\",       \"enabled\": \"true\",       \"_default\": \"true\",       \"url\": \"file:/path/to/file.tiff\"     }   }   ```  (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.put_coverage_store_with_http_info(body, workspace, store, **kwargs)  # noqa: E501
+            return self.put_coverage_store_with_http_info(workspace, store, coverage_store_body, **kwargs)  # noqa: E501
         else:
-            (data) = self.put_coverage_store_with_http_info(body, workspace, store, **kwargs)  # noqa: E501
+            (data) = self.put_coverage_store_with_http_info(workspace, store, coverage_store_body, **kwargs)  # noqa: E501
             return data
 
-    def put_coverage_store_with_http_info(self, body, workspace, store, **kwargs):  # noqa: E501
+    def put_coverage_store_with_http_info(self, workspace, store, coverage_store_body, **kwargs):  # noqa: E501
         """Modify a single coverage store.  # noqa: E501
 
         Modifies a single coverage store. Use the \"Accept:\" header to specify format or append an extension to the endpoint (example \"{store}.xml\" for XML).  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.put_coverage_store_with_http_info(body, workspace, store, async_req=True)
+        >>> thread = api.put_coverage_store_with_http_info(workspace, store, coverage_store_body, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param CoverageStoreInfo body: The coverage store body information to upload.
-For a PUT, only values which should be changed need to be included.
-
-Examples:
-- application/xml:
-
-  ```
-  <coverageStore>
-    <description>A coverage store</description>
-    <enabled>true</enabled>
-    <__default>true</__default>
-    <url>file:/path/to/file.tiff</url>
-  </coverageStore>
-  ```
-
-- application/json:
-
-  ```
-  {
-    "coverageStore": {
-      "description": "A coverage store",
-      "enabled": "true",
-      "_default": "true",
-      "url": "file:/path/to/file.tiff"
-    }
-  }
-  ```
- (required)
         :param str workspace: The name of the worskpace containing the coverage stores. (required)
         :param str store: The name of the store to be retrieved (required)
+        :param Object coverage_store_body: The coverage store body information to upload. For a PUT, only values which should be changed need to be included.  Examples: - application/xml:    ```   <coverageStore>     <description>A coverage store</description>     <enabled>true</enabled>     <__default>true</__default>     <url>file:/path/to/file.tiff</url>   </coverageStore>   ```  - application/json:    ```   {     \"coverageStore\": {       \"description\": \"A coverage store\",       \"enabled\": \"true\",       \"_default\": \"true\",       \"url\": \"file:/path/to/file.tiff\"     }   }   ```  (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['body', 'workspace', 'store']  # noqa: E501
+        all_params = ['workspace', 'store', 'coverage_store_body']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1010,10 +956,6 @@ Examples:
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'body' is set
-        if ('body' not in params or
-                params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `put_coverage_store`")  # noqa: E501
         # verify the required parameter 'workspace' is set
         if ('workspace' not in params or
                 params['workspace'] is None):
@@ -1022,6 +964,10 @@ Examples:
         if ('store' not in params or
                 params['store'] is None):
             raise ValueError("Missing the required parameter `store` when calling `put_coverage_store`")  # noqa: E501
+        # verify the required parameter 'coverage_store_body' is set
+        if ('coverage_store_body' not in params or
+                params['coverage_store_body'] is None):
+            raise ValueError("Missing the required parameter `coverage_store_body` when calling `put_coverage_store`")  # noqa: E501
 
         collection_formats = {}
 
@@ -1032,6 +978,8 @@ Examples:
             path_params['store'] = params['store']  # noqa: E501
 
         query_params = []
+        if 'coverage_store_body' in params:
+            query_params.append(('coverageStoreBody', params['coverage_store_body']))  # noqa: E501
 
         header_params = {}
 
@@ -1039,12 +987,6 @@ Examples:
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/xml', 'application/json'])  # noqa: E501
-
         # Authentication setting
         auth_settings = []  # noqa: E501
 

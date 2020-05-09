@@ -445,7 +445,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **put_coverage_store**
-> put_coverage_store(body, workspace, store)
+> put_coverage_store(workspace, store, coverage_store_body)
 
 Modify a single coverage store.
 
@@ -461,40 +461,13 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = gs_rest_api_coveragestores.DefaultApi()
-body = gs_rest_api_coveragestores.CoverageStoreInfo() # CoverageStoreInfo | The coverage store body information to upload.
-For a PUT, only values which should be changed need to be included.
-
-Examples:
-- application/xml:
-
-  ```
-  <coverageStore>
-    <description>A coverage store</description>
-    <enabled>true</enabled>
-    <__default>true</__default>
-    <url>file:/path/to/file.tiff</url>
-  </coverageStore>
-  ```
-
-- application/json:
-
-  ```
-  {
-    "coverageStore": {
-      "description": "A coverage store",
-      "enabled": "true",
-      "_default": "true",
-      "url": "file:/path/to/file.tiff"
-    }
-  }
-  ```
-
 workspace = 'workspace_example' # str | The name of the worskpace containing the coverage stores.
 store = 'store_example' # str | The name of the store to be retrieved
+coverage_store_body = gs_rest_api_coveragestores.Object() # Object | The coverage store body information to upload. For a PUT, only values which should be changed need to be included.  Examples: - application/xml:    ```   <coverageStore>     <description>A coverage store</description>     <enabled>true</enabled>     <__default>true</__default>     <url>file:/path/to/file.tiff</url>   </coverageStore>   ```  - application/json:    ```   {     \"coverageStore\": {       \"description\": \"A coverage store\",       \"enabled\": \"true\",       \"_default\": \"true\",       \"url\": \"file:/path/to/file.tiff\"     }   }   ``` 
 
 try:
     # Modify a single coverage store.
-    api_instance.put_coverage_store(body, workspace, store)
+    api_instance.put_coverage_store(workspace, store, coverage_store_body)
 except ApiException as e:
     print("Exception when calling DefaultApi->put_coverage_store: %s\n" % e)
 ```
@@ -503,36 +476,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**CoverageStoreInfo**](CoverageStoreInfo.md)| The coverage store body information to upload.
-For a PUT, only values which should be changed need to be included.
-
-Examples:
-- application/xml:
-
-  &#x60;&#x60;&#x60;
-  &lt;coverageStore&gt;
-    &lt;description&gt;A coverage store&lt;/description&gt;
-    &lt;enabled&gt;true&lt;/enabled&gt;
-    &lt;__default&gt;true&lt;/__default&gt;
-    &lt;url&gt;file:/path/to/file.tiff&lt;/url&gt;
-  &lt;/coverageStore&gt;
-  &#x60;&#x60;&#x60;
-
-- application/json:
-
-  &#x60;&#x60;&#x60;
-  {
-    &quot;coverageStore&quot;: {
-      &quot;description&quot;: &quot;A coverage store&quot;,
-      &quot;enabled&quot;: &quot;true&quot;,
-      &quot;_default&quot;: &quot;true&quot;,
-      &quot;url&quot;: &quot;file:/path/to/file.tiff&quot;
-    }
-  }
-  &#x60;&#x60;&#x60;
- | 
  **workspace** | **str**| The name of the worskpace containing the coverage stores. | 
  **store** | **str**| The name of the store to be retrieved | 
+ **coverage_store_body** | [**Object**](.md)| The coverage store body information to upload. For a PUT, only values which should be changed need to be included.  Examples: - application/xml:    &#x60;&#x60;&#x60;   &lt;coverageStore&gt;     &lt;description&gt;A coverage store&lt;/description&gt;     &lt;enabled&gt;true&lt;/enabled&gt;     &lt;__default&gt;true&lt;/__default&gt;     &lt;url&gt;file:/path/to/file.tiff&lt;/url&gt;   &lt;/coverageStore&gt;   &#x60;&#x60;&#x60;  - application/json:    &#x60;&#x60;&#x60;   {     \&quot;coverageStore\&quot;: {       \&quot;description\&quot;: \&quot;A coverage store\&quot;,       \&quot;enabled\&quot;: \&quot;true\&quot;,       \&quot;_default\&quot;: \&quot;true\&quot;,       \&quot;url\&quot;: \&quot;file:/path/to/file.tiff\&quot;     }   }   &#x60;&#x60;&#x60;  | 
 
 ### Return type
 
@@ -544,7 +490,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/xml, application/json
+ - **Content-Type**: Not defined
  - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
