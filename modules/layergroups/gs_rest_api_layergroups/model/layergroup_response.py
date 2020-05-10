@@ -29,7 +29,7 @@ class LayergroupResponse(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'layer_groups': 'Layergroups'
+        'layer_groups': 'object'
     }
 
     attribute_map = {
@@ -49,7 +49,7 @@ class LayergroupResponse(object):
 
 
         :return: The layer_groups of this LayergroupResponse.  # noqa: E501
-        :rtype: Layergroups
+        :rtype: object
         """
         return self._layer_groups
 
@@ -59,7 +59,7 @@ class LayergroupResponse(object):
 
 
         :param layer_groups: The layer_groups of this LayergroupResponse.  # noqa: E501
-        :type: Layergroups
+        :type: object
         """
 
         self._layer_groups = layer_groups
