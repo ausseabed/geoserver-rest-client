@@ -524,7 +524,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **post_workspace_layergroups**
-> str post_workspace_layergroups(body)
+> str post_workspace_layergroups(body, workspace)
 
 Add a new layer group
 
@@ -541,10 +541,11 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = gs_rest_api_layergroups.DefaultApi()
 body = gs_rest_api_layergroups.LayergroupWrapper() # LayergroupWrapper | The layer group body information to upload.
+workspace = 'workspace_example' # str | The name of the workspace
 
 try:
     # Add a new layer group
-    api_response = api_instance.post_workspace_layergroups(body)
+    api_response = api_instance.post_workspace_layergroups(body, workspace)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling DefaultApi->post_workspace_layergroups: %s\n" % e)
@@ -555,6 +556,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**LayergroupWrapper**](LayergroupWrapper.md)| The layer group body information to upload. | 
+ **workspace** | **str**| The name of the workspace | 
 
 ### Return type
 

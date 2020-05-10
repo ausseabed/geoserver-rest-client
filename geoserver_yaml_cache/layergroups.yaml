@@ -247,6 +247,7 @@ paths:
           required: true          
           schema:
             $ref: "#/definitions/LayergroupWrapper"
+        - $ref: "#/parameters/Workspace"
       consumes:
         - application/xml
         - application/json

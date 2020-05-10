@@ -163,10 +163,11 @@ except ApiException as e:
 # create an instance of the API class
 api_instance = gs_rest_api_layergroups.DefaultApi(gs_rest_api_layergroups.ApiClient(configuration))
 body = gs_rest_api_layergroups.LayergroupWrapper() # LayergroupWrapper | The layer group body information to upload.
+workspace = 'workspace_example' # str | The name of the workspace
 
 try:
     # Add a new layer group
-    api_response = api_instance.post_workspace_layergroups(body)
+    api_response = api_instance.post_workspace_layergroups(body, workspace)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling DefaultApi->post_workspace_layergroups: %s\n" % e)

@@ -1033,45 +1033,47 @@ class DefaultApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def post_workspace_layergroups(self, body, **kwargs):  # noqa: E501
+    def post_workspace_layergroups(self, body, workspace, **kwargs):  # noqa: E501
         """Add a new layer group  # noqa: E501
 
         Adds a new layer group entry to the server in the specified workspace.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.post_workspace_layergroups(body, async_req=True)
+        >>> thread = api.post_workspace_layergroups(body, workspace, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param LayergroupWrapper body: The layer group body information to upload. (required)
+        :param str workspace: The name of the workspace (required)
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.post_workspace_layergroups_with_http_info(body, **kwargs)  # noqa: E501
+            return self.post_workspace_layergroups_with_http_info(body, workspace, **kwargs)  # noqa: E501
         else:
-            (data) = self.post_workspace_layergroups_with_http_info(body, **kwargs)  # noqa: E501
+            (data) = self.post_workspace_layergroups_with_http_info(body, workspace, **kwargs)  # noqa: E501
             return data
 
-    def post_workspace_layergroups_with_http_info(self, body, **kwargs):  # noqa: E501
+    def post_workspace_layergroups_with_http_info(self, body, workspace, **kwargs):  # noqa: E501
         """Add a new layer group  # noqa: E501
 
         Adds a new layer group entry to the server in the specified workspace.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.post_workspace_layergroups_with_http_info(body, async_req=True)
+        >>> thread = api.post_workspace_layergroups_with_http_info(body, workspace, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param LayergroupWrapper body: The layer group body information to upload. (required)
+        :param str workspace: The name of the workspace (required)
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['body']  # noqa: E501
+        all_params = ['body', 'workspace']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1090,10 +1092,16 @@ class DefaultApi(object):
         if ('body' not in params or
                 params['body'] is None):
             raise ValueError("Missing the required parameter `body` when calling `post_workspace_layergroups`")  # noqa: E501
+        # verify the required parameter 'workspace' is set
+        if ('workspace' not in params or
+                params['workspace'] is None):
+            raise ValueError("Missing the required parameter `workspace` when calling `post_workspace_layergroups`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
+        if 'workspace' in params:
+            path_params['workspace'] = params['workspace']  # noqa: E501
 
         query_params = []
 
