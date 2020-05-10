@@ -202,7 +202,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_layergroup**
-> Layergroup get_layergroup(layergroup_name)
+> LayergroupWrapper get_layergroup(layergroup_name)
 
 Retrieve a layer group
 
@@ -236,7 +236,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Layergroup**](Layergroup.md)
+[**LayergroupWrapper**](LayergroupWrapper.md)
 
 ### Authorization
 
@@ -294,7 +294,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_workspace_layergroup**
-> Layergroup get_workspace_layergroup(workspace, layergroup)
+> LayergroupWrapper get_workspace_layergroup(workspace, layergroup)
 
 Retrieve a layer group
 
@@ -330,7 +330,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Layergroup**](Layergroup.md)
+[**LayergroupWrapper**](LayergroupWrapper.md)
 
 ### Authorization
 
@@ -450,7 +450,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = gs_rest_api_layergroups.DefaultApi()
-body = gs_rest_api_layergroups.Layergroup() # Layergroup | The layer group body information to upload.
+body = gs_rest_api_layergroups.LayergroupWrapper() # LayergroupWrapper | The layer group body information to upload.
 
 try:
     # Add a new layer group
@@ -464,7 +464,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**Layergroup**](Layergroup.md)| The layer group body information to upload. | 
+ **body** | [**LayergroupWrapper**](LayergroupWrapper.md)| The layer group body information to upload. | 
 
 ### Return type
 
@@ -540,7 +540,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = gs_rest_api_layergroups.DefaultApi()
-body = gs_rest_api_layergroups.Layergroup() # Layergroup | The layer group body information to upload.
+body = gs_rest_api_layergroups.LayergroupWrapper() # LayergroupWrapper | The layer group body information to upload.
 
 try:
     # Add a new layer group
@@ -554,7 +554,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**Layergroup**](Layergroup.md)| The layer group body information to upload. | 
+ **body** | [**LayergroupWrapper**](LayergroupWrapper.md)| The layer group body information to upload. | 
 
 ### Return type
 
@@ -588,7 +588,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = gs_rest_api_layergroups.DefaultApi()
-body = gs_rest_api_layergroups.Layergroup() # Layergroup | The updated layer group definition.
+body = gs_rest_api_layergroups.LayergroupWrapper() # LayergroupWrapper | The updated layer group definition.
 layergroup_name = 'layergroup_name_example' # str | The name of the layer group to modify.
 
 try:
@@ -602,7 +602,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**Layergroup**](Layergroup.md)| The updated layer group definition. | 
+ **body** | [**LayergroupWrapper**](LayergroupWrapper.md)| The updated layer group definition. | 
  **layergroup_name** | **str**| The name of the layer group to modify. | 
 
 ### Return type
@@ -679,7 +679,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = gs_rest_api_layergroups.DefaultApi()
-body = gs_rest_api_layergroups.Layergroup() # Layergroup | The updated layer group definition.
+body = gs_rest_api_layergroups.LayergroupWrapper() # LayergroupWrapper | The updated layer group definition.
 workspace = 'workspace_example' # str | The name of the workspace
 layergroup = 'layergroup_example' # str | The name of the layer group to modify.
 
@@ -694,7 +694,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**Layergroup**](Layergroup.md)| The updated layer group definition. | 
+ **body** | [**LayergroupWrapper**](LayergroupWrapper.md)| The updated layer group definition. | 
  **workspace** | **str**| The name of the workspace | 
  **layergroup** | **str**| The name of the layer group to modify. | 
 

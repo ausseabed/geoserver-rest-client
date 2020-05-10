@@ -49,7 +49,7 @@ paths:
           in: body
           required: true          
           schema:
-            $ref: "#/definitions/Layergroup"
+            $ref: "#/definitions/LayergroupWrapper"
       consumes:
         - application/xml
         - application/json
@@ -96,7 +96,7 @@ paths:
         200:
           description: OK
           schema:
-            $ref: "#/definitions/Layergroup"
+            $ref: "#/definitions/LayergroupWrapper"
           examples:
             application/xml: |
               <layerGroup>
@@ -184,7 +184,7 @@ paths:
           description: The updated layer group definition.
           required: true
           schema:
-            $ref: "#/definitions/Layergroup"
+            $ref: "#/definitions/LayergroupWrapper"
       consumes:
         - application/xml
         - application/json
@@ -246,7 +246,7 @@ paths:
           in: body
           required: true          
           schema:
-            $ref: "#/definitions/Layergroup"
+            $ref: "#/definitions/LayergroupWrapper"
       consumes:
         - application/xml
         - application/json
@@ -295,7 +295,7 @@ paths:
         200:
           description: OK
           schema:
-            $ref: "#/definitions/Layergroup"
+            $ref: "#/definitions/LayergroupWrapper"
           examples:
             application/json: |
               {"layerGroup":{"name":"spearfish","mode":"SINGLE","title":"Spearfish","abstractTxt":"Spearfish City in Lawrence County, South Dakota","workspace":{"name":"sf"},"publishables":{"published":[{"@type":"layer","name":"sfdem","href":"http://localhost:8080/geoserver/rest/workspaces/sf/layers/sfdem.json"},{"@type":"layer","name":"streams","href":"http://localhost:8080/geoserver/rest/workspaces/sf/layers/streams.json"}]},"styles":{"style":[{"name":"dem","href":"http://localhost:8080/geoserver/rest/styles/dem.json"},"null"]},"bounds":{"minx":589425.9342365642,"maxx":609518.6719560538,"miny":4913959.224611808,"maxy":4928082.949945881,"crs":{"@class":"projected","$":"EPSG:26713"}},"metadata":{"entry":{"@key":"rawStyleList","$":""}}}}
@@ -360,7 +360,7 @@ paths:
           description: The updated layer group definition.
           required: true
           schema:
-            $ref: "#/definitions/Layergroup"
+            $ref: "#/definitions/LayergroupWrapper"
       consumes:
         - application/xml
         - application/json
@@ -412,10 +412,16 @@ definitions:
         type: string
         description: URL to layer group definition
 
+  LayergroupWrapper:
+    type: object
+    properties:
+      layerGroup:
+        type: object
+        properties:
+          $ref: "#/definitions/Layergroup"
+
   Layergroup:
     title: layerGroup
-    xml:
-      name: layerGroup
     type: object
     properties:
       name:

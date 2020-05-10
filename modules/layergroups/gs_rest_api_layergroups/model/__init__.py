@@ -19,4 +19,5 @@ from gs_rest_api_layergroups.model.layergroup_metadata_link import LayergroupMet
 from gs_rest_api_layergroups.model.layergroup_published import LayergroupPublished
 from gs_rest_api_layergroups.model.layergroup_response import LayergroupResponse
 from gs_rest_api_layergroups.model.layergroup_style import LayergroupStyle
+from gs_rest_api_layergroups.model.layergroup_wrapper import LayergroupWrapper
 from gs_rest_api_layergroups.model.layergroups import Layergroups

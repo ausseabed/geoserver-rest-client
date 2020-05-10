@@ -143,7 +143,7 @@ except ApiException as e:
 
 # create an instance of the API class
 api_instance = gs_rest_api_layergroups.DefaultApi(gs_rest_api_layergroups.ApiClient(configuration))
-body = gs_rest_api_layergroups.Layergroup() # Layergroup | The layer group body information to upload.
+body = gs_rest_api_layergroups.LayergroupWrapper() # LayergroupWrapper | The layer group body information to upload.
 
 try:
     # Add a new layer group
@@ -162,7 +162,7 @@ except ApiException as e:
 
 # create an instance of the API class
 api_instance = gs_rest_api_layergroups.DefaultApi(gs_rest_api_layergroups.ApiClient(configuration))
-body = gs_rest_api_layergroups.Layergroup() # Layergroup | The layer group body information to upload.
+body = gs_rest_api_layergroups.LayergroupWrapper() # LayergroupWrapper | The layer group body information to upload.
 
 try:
     # Add a new layer group
@@ -173,7 +173,7 @@ except ApiException as e:
 
 # create an instance of the API class
 api_instance = gs_rest_api_layergroups.DefaultApi(gs_rest_api_layergroups.ApiClient(configuration))
-body = gs_rest_api_layergroups.Layergroup() # Layergroup | The updated layer group definition.
+body = gs_rest_api_layergroups.LayergroupWrapper() # LayergroupWrapper | The updated layer group definition.
 layergroup_name = 'layergroup_name_example' # str | The name of the layer group to modify.
 
 try:
@@ -192,7 +192,7 @@ except ApiException as e:
 
 # create an instance of the API class
 api_instance = gs_rest_api_layergroups.DefaultApi(gs_rest_api_layergroups.ApiClient(configuration))
-body = gs_rest_api_layergroups.Layergroup() # Layergroup | The updated layer group definition.
+body = gs_rest_api_layergroups.LayergroupWrapper() # LayergroupWrapper | The updated layer group definition.
 workspace = 'workspace_example' # str | The name of the workspace
 layergroup = 'layergroup_example' # str | The name of the layer group to modify.
 
@@ -241,6 +241,7 @@ Class | Method | HTTP request | Description
  - [LayergroupPublished](docs/LayergroupPublished.md)
  - [LayergroupResponse](docs/LayergroupResponse.md)
  - [LayergroupStyle](docs/LayergroupStyle.md)
+ - [LayergroupWrapper](docs/LayergroupWrapper.md)
  - [Layergroups](docs/Layergroups.md)
 
 ## Documentation For Authorization
