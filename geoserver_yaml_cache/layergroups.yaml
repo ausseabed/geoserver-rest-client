@@ -399,8 +399,10 @@ definitions:
     type: object
     properties:
       layerGroups:
-        layerGroup:
-          $ref: "#/definitions/Layergroups"
+        type: object
+        properties:
+          layerGroup:
+            $ref: "#/definitions/Layergroups"
 
   Layergroups:
     title: layerGroup
@@ -418,8 +420,7 @@ definitions:
     properties:
       layerGroup:
         type: object
-        properties:
-          $ref: "#/definitions/Layergroup"
+        $ref: "#/definitions/Layergroup"
 
   Layergroup:
     title: layerGroup
@@ -503,9 +504,6 @@ definitions:
     type: object
     title: layer
     properties:
-      type:
-        type: string
-        description: Define it as layer
       name:
         type: string
         description: Name of the comprising layer, or empty to indicate a style group defined by the corresponding style. 

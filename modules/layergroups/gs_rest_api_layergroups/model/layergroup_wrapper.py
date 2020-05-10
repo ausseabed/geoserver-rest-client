@@ -29,7 +29,7 @@ class LayergroupWrapper(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'layer_group': 'object'
+        'layer_group': 'Layergroup'
     }
 
     attribute_map = {
@@ -49,7 +49,7 @@ class LayergroupWrapper(object):
 
 
         :return: The layer_group of this LayergroupWrapper.  # noqa: E501
-        :rtype: object
+        :rtype: Layergroup
         """
         return self._layer_group
 
@@ -59,7 +59,7 @@ class LayergroupWrapper(object):
 
 
         :param layer_group: The layer_group of this LayergroupWrapper.  # noqa: E501
-        :type: object
+        :type: Layergroup
         """
 
         self._layer_group = layer_group
