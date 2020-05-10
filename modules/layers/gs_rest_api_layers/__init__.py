@@ -22,6 +22,7 @@ from gs_rest_api_layers.configuration import Configuration
 # import models into sdk package
 from gs_rest_api_layers.model.layer import Layer
 from gs_rest_api_layers.model.layer_reference import LayerReference
+from gs_rest_api_layers.model.layer_wrapper import LayerWrapper
 from gs_rest_api_layers.model.layers import Layers
 from gs_rest_api_layers.model.metadata_entry import MetadataEntry
 from gs_rest_api_layers.model.style_reference import StyleReference

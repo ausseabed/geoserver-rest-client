@@ -157,7 +157,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **layers_name_get**
-> Layer layers_name_get(layer_name)
+> LayerWrapper layers_name_get(layer_name)
 
 Retrieve a layer
 
@@ -191,7 +191,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Layer**](Layer.md)
+[**LayerWrapper**](LayerWrapper.md)
 
 ### Authorization
 
@@ -263,7 +263,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = gs_rest_api_layers.DefaultApi()
-body = gs_rest_api_layers.Layer() # Layer | The updated layer definition.
+body = gs_rest_api_layers.LayerWrapper() # LayerWrapper | The updated layer definition.
 layer_name = 'layer_name_example' # str | The name of the layer to modify.
 
 try:
@@ -277,7 +277,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**Layer**](Layer.md)| The updated layer definition. | 
+ **body** | [**LayerWrapper**](LayerWrapper.md)| The updated layer definition. | 
  **layer_name** | **str**| The name of the layer to modify. | 
 
 ### Return type
@@ -347,7 +347,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **layers_name_workspace_get**
-> Layer layers_name_workspace_get(workspace_name, layer_name)
+> LayerWrapper layers_name_workspace_get(workspace_name, layer_name)
 
 Retrieve a layer
 
@@ -383,7 +383,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Layer**](Layer.md)
+[**LayerWrapper**](LayerWrapper.md)
 
 ### Authorization
 
@@ -455,7 +455,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = gs_rest_api_layers.DefaultApi()
-body = gs_rest_api_layers.Layer() # Layer | The updated layer definition.
+body = gs_rest_api_layers.LayerWrapper() # LayerWrapper | The updated layer definition.
 workspace_name = gs_rest_api_layers.Object() # Object | The name of the workspace the layer is in.
 layer_name = 'layer_name_example' # str | The name of the layer to modify.
 
@@ -470,7 +470,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**Layer**](Layer.md)| The updated layer definition. | 
+ **body** | [**LayerWrapper**](LayerWrapper.md)| The updated layer definition. | 
  **workspace_name** | [**Object**](.md)| The name of the workspace the layer is in. | 
  **layer_name** | **str**| The name of the layer to modify. | 
 

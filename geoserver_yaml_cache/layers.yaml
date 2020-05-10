@@ -96,7 +96,7 @@ paths:
         200:
           description: OK
           schema:
-            $ref: "#/definitions/Layer"
+            $ref: "#/definitions/LayerWrapper"
           examples:
             application/xml: |
               <layer>
@@ -184,7 +184,7 @@ paths:
           description: The updated layer definition.
           required: true
           schema:
-            $ref: "#/definitions/Layer"
+            $ref: "#/definitions/LayerWrapper"
       consumes:
         - application/xml
         - application/json
@@ -295,7 +295,7 @@ paths:
         200:
           description: OK
           schema:
-            $ref: "#/definitions/Layer"
+            $ref: "#/definitions/LayerWrapper"
           examples:
             application/xml: |
               <layer>
@@ -387,7 +387,7 @@ paths:
           description: The updated layer definition.
           required: true
           schema:
-            $ref: "#/definitions/Layer"
+            $ref: "#/definitions/LayerWrapper"
       consumes:
         - application/xml
         - application/json
@@ -439,10 +439,14 @@ definitions:
         type: string
         description: URL to layer definition
         
+  LayerWrapper:
+    type: object
+    properties:
+      layer:
+        $ref: "#/definitions/Layer"
+
   Layer:
     title: layer
-    xml:
-      name: layer
     type: object
     properties:
       name:

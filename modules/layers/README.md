@@ -102,7 +102,7 @@ except ApiException as e:
 
 # create an instance of the API class
 api_instance = gs_rest_api_layers.DefaultApi(gs_rest_api_layers.ApiClient(configuration))
-body = gs_rest_api_layers.Layer() # Layer | The updated layer definition.
+body = gs_rest_api_layers.LayerWrapper() # LayerWrapper | The updated layer definition.
 layer_name = 'layer_name_example' # str | The name of the layer to modify.
 
 try:
@@ -145,7 +145,7 @@ except ApiException as e:
 
 # create an instance of the API class
 api_instance = gs_rest_api_layers.DefaultApi(gs_rest_api_layers.ApiClient(configuration))
-body = gs_rest_api_layers.Layer() # Layer | The updated layer definition.
+body = gs_rest_api_layers.LayerWrapper() # LayerWrapper | The updated layer definition.
 workspace_name = gs_rest_api_layers.Object() # Object | The name of the workspace the layer is in.
 layer_name = 'layer_name_example' # str | The name of the layer to modify.
 
@@ -234,6 +234,7 @@ Class | Method | HTTP request | Description
 
  - [Layer](docs/Layer.md)
  - [LayerReference](docs/LayerReference.md)
+ - [LayerWrapper](docs/LayerWrapper.md)
  - [Layers](docs/Layers.md)
  - [MetadataEntry](docs/MetadataEntry.md)
  - [StyleReference](docs/StyleReference.md)

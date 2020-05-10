@@ -308,7 +308,7 @@ class DefaultApi(object):
 
         :param async_req bool
         :param str layer_name: The name of the layer to retrieve. (required)
-        :return: Layer
+        :return: LayerWrapper
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -330,7 +330,7 @@ class DefaultApi(object):
 
         :param async_req bool
         :param str layer_name: The name of the layer to retrieve. (required)
-        :return: Layer
+        :return: LayerWrapper
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -384,7 +384,7 @@ class DefaultApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='Layer',  # noqa: E501
+            response_type='LayerWrapper',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -485,7 +485,7 @@ class DefaultApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param Layer body: The updated layer definition. (required)
+        :param LayerWrapper body: The updated layer definition. (required)
         :param str layer_name: The name of the layer to modify. (required)
         :return: None
                  If the method is called asynchronously,
@@ -508,7 +508,7 @@ class DefaultApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param Layer body: The updated layer definition. (required)
+        :param LayerWrapper body: The updated layer definition. (required)
         :param str layer_name: The name of the layer to modify. (required)
         :return: None
                  If the method is called asynchronously,
@@ -693,7 +693,7 @@ class DefaultApi(object):
         :param async_req bool
         :param str workspace_name: The name of the workspace the layer is in. (required)
         :param str layer_name: The name of the layer to retrieve. (required)
-        :return: Layer
+        :return: LayerWrapper
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -716,7 +716,7 @@ class DefaultApi(object):
         :param async_req bool
         :param str workspace_name: The name of the workspace the layer is in. (required)
         :param str layer_name: The name of the layer to retrieve. (required)
-        :return: Layer
+        :return: LayerWrapper
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -776,7 +776,7 @@ class DefaultApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='Layer',  # noqa: E501
+            response_type='LayerWrapper',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -877,7 +877,7 @@ class DefaultApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param Layer body: The updated layer definition. (required)
+        :param LayerWrapper body: The updated layer definition. (required)
         :param Object workspace_name: The name of the workspace the layer is in. (required)
         :param str layer_name: The name of the layer to modify. (required)
         :return: None
@@ -901,7 +901,7 @@ class DefaultApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param Layer body: The updated layer definition. (required)
+        :param LayerWrapper body: The updated layer definition. (required)
         :param Object workspace_name: The name of the workspace the layer is in. (required)
         :param str layer_name: The name of the layer to modify. (required)
         :return: None
