@@ -1,7 +1,7 @@
 #!/bin/bash
 cd modules
 # Tested using swagger-codegen-cli-3.0.19
-for file in `cat ../list_of_modules.txt | grep "coverages.yaml"`
+for file in `cat ../list_of_modules.txt | grep "layers.yaml"`
 do
 	rootname=`echo $file | sed "s/\..*//"` 
 	echo $rootname

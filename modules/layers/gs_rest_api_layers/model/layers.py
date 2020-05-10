@@ -29,7 +29,7 @@ class Layers(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'layers': 'LayerReference'
+        'layers': 'object'
     }
 
     attribute_map = {
@@ -49,7 +49,7 @@ class Layers(object):
 
 
         :return: The layers of this Layers.  # noqa: E501
-        :rtype: LayerReference
+        :rtype: object
         """
         return self._layers
 
@@ -59,7 +59,7 @@ class Layers(object):
 
 
         :param layers: The layers of this Layers.  # noqa: E501
-        :type: LayerReference
+        :type: object
         """
 
         self._layers = layers

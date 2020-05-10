@@ -425,7 +425,8 @@ definitions:
     type: object
     properties:
       layers:
-        $ref: "#/definitions/LayerReference"
+        layer:
+          $ref: "#/definitions/LayerReference"
         
   LayerReference:
     title: layers
