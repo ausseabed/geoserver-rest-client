@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**type** | **str** | Define it as layer | [optional] 
 **name** | **str** | Name of the comprising layer, or empty to indicate a style group defined by the corresponding style. | [optional] 
 **link** | **str** | URL to the comprising layer | [optional] 
 
