@@ -504,6 +504,9 @@ definitions:
     type: object
     title: layer
     properties:
+      '@type':
+        type: string
+        description: Define it as layer
       name:
         type: string
         description: Name of the comprising layer, or empty to indicate a style group defined by the corresponding style. 

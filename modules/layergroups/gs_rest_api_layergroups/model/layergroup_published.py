@@ -29,24 +29,52 @@ class LayergroupPublished(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'type': 'str',
         'name': 'str',
         'link': 'str'
     }
 
     attribute_map = {
+        'type': '@type',
         'name': 'name',
         'link': 'link'
     }
 
-    def __init__(self, name=None, link=None):  # noqa: E501
+    def __init__(self, type=None, name=None, link=None):  # noqa: E501
         """LayergroupPublished - a model defined in Swagger"""  # noqa: E501
+        self._type = None
         self._name = None
         self._link = None
         self.discriminator = None
+        if type is not None:
+            self.type = type
         if name is not None:
             self.name = name
         if link is not None:
             self.link = link
+
+    @property
+    def type(self):
+        """Gets the type of this LayergroupPublished.  # noqa: E501
+
+        Define it as layer  # noqa: E501
+
+        :return: The type of this LayergroupPublished.  # noqa: E501
+        :rtype: str
+        """
+        return self._type
+
+    @type.setter
+    def type(self, type):
+        """Sets the type of this LayergroupPublished.
+
+        Define it as layer  # noqa: E501
+
+        :param type: The type of this LayergroupPublished.  # noqa: E501
+        :type: str
+        """
+
+        self._type = type
 
     @property
     def name(self):
