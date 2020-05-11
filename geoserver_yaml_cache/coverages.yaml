@@ -916,7 +916,7 @@ definitions:
             items:
               type: string 
               description: A single keyword value
-      metadatalinks:
+      metadataLinks:
         type: object
         description: Wraps a collection of metadata links for the resource.
         properties:

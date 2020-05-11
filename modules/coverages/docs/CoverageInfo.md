@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **abstract** | **str** | A description of the resource. This is usually something that is meant to be displayed in a user interface. | [optional] 
 **default_interpolation_method** | **str** | Default resampling (interpolation) method that will be used for this coverage. | [optional] 
 **keywords** | **object** | A collection of keywords associated with the resource. | [optional] 
-**metadatalinks** | **object** | Wraps a collection of metadata links for the resource. | [optional] 
+**metadata_links** | **object** | Wraps a collection of metadata links for the resource. | [optional] 
 **data_links** | **object** | Wraps a collection of data links for the resource. | [optional] 
 **native_crs** | **str** | The native coordinate reference system object of the resource. | [optional] 
 **srs** | **str** | Returns the identifier of coordinate reference system of the resource. | [optional] 

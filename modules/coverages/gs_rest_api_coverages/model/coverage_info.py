@@ -36,7 +36,7 @@ class CoverageInfo(object):
         'abstract': 'str',
         'default_interpolation_method': 'str',
         'keywords': 'object',
-        'metadatalinks': 'object',
+        'metadata_links': 'object',
         'data_links': 'object',
         'native_crs': 'str',
         'srs': 'str',
@@ -65,7 +65,7 @@ class CoverageInfo(object):
         'abstract': 'abstract',
         'default_interpolation_method': 'defaultInterpolationMethod',
         'keywords': 'keywords',
-        'metadatalinks': 'metadatalinks',
+        'metadata_links': 'metadataLinks',
         'data_links': 'dataLinks',
         'native_crs': 'nativeCRS',
         'srs': 'srs',
@@ -86,7 +86,7 @@ class CoverageInfo(object):
         'grid': 'grid'
     }
 
-    def __init__(self, name=None, native_name=None, namespace=None, title=None, abstract=None, default_interpolation_method=None, keywords=None, metadatalinks=None, data_links=None, native_crs=None, srs=None, native_bounding_box=None, lat_lon_bounding_box=None, metadata=None, store=None, cql_filter=None, max_features=None, num_decimals=None, response_srs=None, overriding_service_srs=None, skip_number_matched=None, circular_arc_present=None, linearization_tolerance=None, attributes=None, dimensions=None, grid=None):  # noqa: E501
+    def __init__(self, name=None, native_name=None, namespace=None, title=None, abstract=None, default_interpolation_method=None, keywords=None, metadata_links=None, data_links=None, native_crs=None, srs=None, native_bounding_box=None, lat_lon_bounding_box=None, metadata=None, store=None, cql_filter=None, max_features=None, num_decimals=None, response_srs=None, overriding_service_srs=None, skip_number_matched=None, circular_arc_present=None, linearization_tolerance=None, attributes=None, dimensions=None, grid=None):  # noqa: E501
         """CoverageInfo - a model defined in Swagger"""  # noqa: E501
         self._name = None
         self._native_name = None
@@ -95,7 +95,7 @@ class CoverageInfo(object):
         self._abstract = None
         self._default_interpolation_method = None
         self._keywords = None
-        self._metadatalinks = None
+        self._metadata_links = None
         self._data_links = None
         self._native_crs = None
         self._srs = None
@@ -129,8 +129,8 @@ class CoverageInfo(object):
             self.default_interpolation_method = default_interpolation_method
         if keywords is not None:
             self.keywords = keywords
-        if metadatalinks is not None:
-            self.metadatalinks = metadatalinks
+        if metadata_links is not None:
+            self.metadata_links = metadata_links
         if data_links is not None:
             self.data_links = data_links
         if native_crs is not None:
@@ -330,27 +330,27 @@ class CoverageInfo(object):
         self._keywords = keywords
 
     @property
-    def metadatalinks(self):
-        """Gets the metadatalinks of this CoverageInfo.  # noqa: E501
+    def metadata_links(self):
+        """Gets the metadata_links of this CoverageInfo.  # noqa: E501
 
         Wraps a collection of metadata links for the resource.  # noqa: E501
 
-        :return: The metadatalinks of this CoverageInfo.  # noqa: E501
+        :return: The metadata_links of this CoverageInfo.  # noqa: E501
         :rtype: object
         """
-        return self._metadatalinks
+        return self._metadata_links
 
-    @metadatalinks.setter
-    def metadatalinks(self, metadatalinks):
-        """Sets the metadatalinks of this CoverageInfo.
+    @metadata_links.setter
+    def metadata_links(self, metadata_links):
+        """Sets the metadata_links of this CoverageInfo.
 
         Wraps a collection of metadata links for the resource.  # noqa: E501
 
-        :param metadatalinks: The metadatalinks of this CoverageInfo.  # noqa: E501
+        :param metadata_links: The metadata_links of this CoverageInfo.  # noqa: E501
         :type: object
         """
 
-        self._metadatalinks = metadatalinks
+        self._metadata_links = metadata_links
 
     @property
     def data_links(self):
