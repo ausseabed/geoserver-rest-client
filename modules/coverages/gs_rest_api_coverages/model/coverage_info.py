@@ -31,11 +31,13 @@ class CoverageInfo(object):
     swagger_types = {
         'name': 'str',
         'native_name': 'str',
+        'native_format': 'str',
         'namespace': 'object',
         'title': 'str',
         'abstract': 'str',
         'default_interpolation_method': 'str',
         'keywords': 'object',
+        'supported_formats': 'object',
         'metadata_links': 'object',
         'data_links': 'object',
         'native_crs': 'str',
@@ -60,11 +62,13 @@ class CoverageInfo(object):
     attribute_map = {
         'name': 'name',
         'native_name': 'nativeName',
+        'native_format': 'nativeFormat',
         'namespace': 'namespace',
         'title': 'title',
         'abstract': 'abstract',
         'default_interpolation_method': 'defaultInterpolationMethod',
         'keywords': 'keywords',
+        'supported_formats': 'supportedFormats',
         'metadata_links': 'metadataLinks',
         'data_links': 'dataLinks',
         'native_crs': 'nativeCRS',
@@ -86,15 +90,17 @@ class CoverageInfo(object):
         'grid': 'grid'
     }
 
-    def __init__(self, name=None, native_name=None, namespace=None, title=None, abstract=None, default_interpolation_method=None, keywords=None, metadata_links=None, data_links=None, native_crs=None, srs=None, native_bounding_box=None, lat_lon_bounding_box=None, metadata=None, store=None, cql_filter=None, max_features=None, num_decimals=None, response_srs=None, overriding_service_srs=None, skip_number_matched=None, circular_arc_present=None, linearization_tolerance=None, attributes=None, dimensions=None, grid=None):  # noqa: E501
+    def __init__(self, name=None, native_name=None, native_format=None, namespace=None, title=None, abstract=None, default_interpolation_method=None, keywords=None, supported_formats=None, metadata_links=None, data_links=None, native_crs=None, srs=None, native_bounding_box=None, lat_lon_bounding_box=None, metadata=None, store=None, cql_filter=None, max_features=None, num_decimals=None, response_srs=None, overriding_service_srs=None, skip_number_matched=None, circular_arc_present=None, linearization_tolerance=None, attributes=None, dimensions=None, grid=None):  # noqa: E501
         """CoverageInfo - a model defined in Swagger"""  # noqa: E501
         self._name = None
         self._native_name = None
+        self._native_format = None
         self._namespace = None
         self._title = None
         self._abstract = None
         self._default_interpolation_method = None
         self._keywords = None
+        self._supported_formats = None
         self._metadata_links = None
         self._data_links = None
         self._native_crs = None
@@ -119,6 +125,8 @@ class CoverageInfo(object):
             self.name = name
         if native_name is not None:
             self.native_name = native_name
+        if native_format is not None:
+            self.native_format = native_format
         if namespace is not None:
             self.namespace = namespace
         if title is not None:
@@ -129,6 +137,8 @@ class CoverageInfo(object):
             self.default_interpolation_method = default_interpolation_method
         if keywords is not None:
             self.keywords = keywords
+        if supported_formats is not None:
+            self.supported_formats = supported_formats
         if metadata_links is not None:
             self.metadata_links = metadata_links
         if data_links is not None:
@@ -213,6 +223,29 @@ class CoverageInfo(object):
         """
 
         self._native_name = native_name
+
+    @property
+    def native_format(self):
+        """Gets the native_format of this CoverageInfo.  # noqa: E501
+
+        The native format of the resource (e.g. GEOTIFF)  # noqa: E501
+
+        :return: The native_format of this CoverageInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._native_format
+
+    @native_format.setter
+    def native_format(self, native_format):
+        """Sets the native_format of this CoverageInfo.
+
+        The native format of the resource (e.g. GEOTIFF)  # noqa: E501
+
+        :param native_format: The native_format of this CoverageInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._native_format = native_format
 
     @property
     def namespace(self):
@@ -328,6 +361,29 @@ class CoverageInfo(object):
         """
 
         self._keywords = keywords
+
+    @property
+    def supported_formats(self):
+        """Gets the supported_formats of this CoverageInfo.  # noqa: E501
+
+        A collection of supported formats associated with the resource.  # noqa: E501
+
+        :return: The supported_formats of this CoverageInfo.  # noqa: E501
+        :rtype: object
+        """
+        return self._supported_formats
+
+    @supported_formats.setter
+    def supported_formats(self, supported_formats):
+        """Sets the supported_formats of this CoverageInfo.
+
+        A collection of supported formats associated with the resource.  # noqa: E501
+
+        :param supported_formats: The supported_formats of this CoverageInfo.  # noqa: E501
+        :type: object
+        """
+
+        self._supported_formats = supported_formats
 
     @property
     def metadata_links(self):

@@ -5,11 +5,13 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **str** | The name of the resource. This name corresponds to the \&quot;published\&quot; name of the resource. | [optional] 
 **native_name** | **str** | The native name of the resource. This name corresponds to the physical resource that feature type is derived from -- a shapefile name, a database table, etc... | [optional] 
+**native_format** | **str** | The native format of the resource (e.g. GEOTIFF) | [optional] 
 **namespace** | **object** | The namespace uri of the resource. Example would be an application schema namespace uri. | [optional] 
 **title** | **str** | The title of the resource. This is usually something that is meant to be displayed in a user interface. | [optional] 
 **abstract** | **str** | A description of the resource. This is usually something that is meant to be displayed in a user interface. | [optional] 
 **default_interpolation_method** | **str** | Default resampling (interpolation) method that will be used for this coverage. | [optional] 
 **keywords** | **object** | A collection of keywords associated with the resource. | [optional] 
+**supported_formats** | **object** | A collection of supported formats associated with the resource. | [optional] 
 **metadata_links** | **object** | Wraps a collection of metadata links for the resource. | [optional] 
 **data_links** | **object** | Wraps a collection of data links for the resource. | [optional] 
 **native_crs** | **str** | The native coordinate reference system object of the resource. | [optional] 

@@ -886,6 +886,9 @@ definitions:
       nativeName:
         type: string
         description: The native name of the resource. This name corresponds to the physical resource that feature type is derived from -- a shapefile name, a database table, etc...
+      nativeFormat:
+        type: string
+        description: The native format of the resource (e.g. GEOTIFF)
       namespace:
         type: object
         description: The namespace uri of the resource. Example would be an application schema namespace uri.
@@ -916,6 +919,16 @@ definitions:
             items:
               type: string 
               description: A single keyword value
+      supportedFormats:
+        type: object
+        description: A collection of supported formats associated with the resource.
+        properties:
+          string:
+            type: array
+            description: List of supported formats like GEOTIFF
+            items:
+              type: string 
+              description: A single format type
       metadataLinks:
         type: object
         description: Wraps a collection of metadata links for the resource.
