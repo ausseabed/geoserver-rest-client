@@ -390,7 +390,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_wcs_settings**
-> WCSInfo get_wcs_settings()
+> WCSInfoWrapper get_wcs_settings()
 
 
 
@@ -419,7 +419,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**WCSInfo**](WCSInfo.md)
+[**WCSInfoWrapper**](WCSInfoWrapper.md)
 
 ### Authorization
 
@@ -433,7 +433,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_wcs_workspace_settings**
-> WCSInfo get_wcs_workspace_settings(workspace)
+> WCSInfoWrapper get_wcs_workspace_settings(workspace)
 
 
 
@@ -466,7 +466,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**WCSInfo**](WCSInfo.md)
+[**WCSInfoWrapper**](WCSInfoWrapper.md)
 
 ### Authorization
 
@@ -480,7 +480,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_wfs_settings**
-> WFSInfo get_wfs_settings()
+> WFSInfoWrapper get_wfs_settings()
 
 
 
@@ -509,7 +509,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**WFSInfo**](WFSInfo.md)
+[**WFSInfoWrapper**](WFSInfoWrapper.md)
 
 ### Authorization
 
@@ -523,7 +523,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_wfs_workspace_settings**
-> WFSInfo get_wfs_workspace_settings(workspace)
+> WFSInfoWrapper get_wfs_workspace_settings(workspace)
 
 
 
@@ -556,7 +556,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**WFSInfo**](WFSInfo.md)
+[**WFSInfoWrapper**](WFSInfoWrapper.md)
 
 ### Authorization
 
@@ -570,7 +570,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_wms_settings**
-> WMSInfo get_wms_settings()
+> WMSInfoWrapper get_wms_settings()
 
 
 
@@ -599,7 +599,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**WMSInfo**](WMSInfo.md)
+[**WMSInfoWrapper**](WMSInfoWrapper.md)
 
 ### Authorization
 
@@ -613,7 +613,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_wms_workspace_settings**
-> WMSInfo get_wms_workspace_settings(workspace)
+> WMSInfoWrapper get_wms_workspace_settings(workspace)
 
 
 
@@ -646,7 +646,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**WMSInfo**](WMSInfo.md)
+[**WMSInfoWrapper**](WMSInfoWrapper.md)
 
 ### Authorization
 
@@ -660,7 +660,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_wmts_settings**
-> WMTSInfo get_wmts_settings()
+> WMTSInfoWrapper get_wmts_settings()
 
 
 
@@ -689,7 +689,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**WMTSInfo**](WMTSInfo.md)
+[**WMTSInfoWrapper**](WMTSInfoWrapper.md)
 
 ### Authorization
 
@@ -703,7 +703,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_wmts_workspace_settings**
-> WMTSInfo get_wmts_workspace_settings(workspace)
+> WMTSInfoWrapper get_wmts_workspace_settings(workspace)
 
 
 
@@ -736,7 +736,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**WMTSInfo**](WMTSInfo.md)
+[**WMTSInfoWrapper**](WMTSInfoWrapper.md)
 
 ### Authorization
 
@@ -1118,7 +1118,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = gs_rest_api_owsservices.DefaultApi()
-body = gs_rest_api_owsservices.WCSInfo() # WCSInfo | Body of the WCS settings
+body = gs_rest_api_owsservices.WCSInfoWrapper() # WCSInfoWrapper | Body of the WCS settings
 
 try:
     api_instance.put_wcs_settings(body)
@@ -1130,7 +1130,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**WCSInfo**](WCSInfo.md)| Body of the WCS settings | 
+ **body** | [**WCSInfoWrapper**](WCSInfoWrapper.md)| Body of the WCS settings | 
 
 ### Return type
 
@@ -1164,7 +1164,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = gs_rest_api_owsservices.DefaultApi()
-body = gs_rest_api_owsservices.WCSInfo() # WCSInfo | Body of the WCS settings
+body = gs_rest_api_owsservices.WCSInfoWrapper() # WCSInfoWrapper | Body of the WCS settings
 workspace = 'workspace_example' # str | The workspace name
 
 try:
@@ -1177,7 +1177,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**WCSInfo**](WCSInfo.md)| Body of the WCS settings | 
+ **body** | [**WCSInfoWrapper**](WCSInfoWrapper.md)| Body of the WCS settings | 
  **workspace** | **str**| The workspace name | 
 
 ### Return type
@@ -1212,7 +1212,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = gs_rest_api_owsservices.DefaultApi()
-body = gs_rest_api_owsservices.WFSInfo() # WFSInfo | Body of the WFS settings
+body = gs_rest_api_owsservices.WFSInfoWrapper() # WFSInfoWrapper | Body of the WFS settings
 
 try:
     api_instance.put_wfs_settings(body)
@@ -1224,7 +1224,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**WFSInfo**](WFSInfo.md)| Body of the WFS settings | 
+ **body** | [**WFSInfoWrapper**](WFSInfoWrapper.md)| Body of the WFS settings | 
 
 ### Return type
 
@@ -1258,7 +1258,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = gs_rest_api_owsservices.DefaultApi()
-body = gs_rest_api_owsservices.WFSInfo() # WFSInfo | Body of the WFS settings layer
+body = gs_rest_api_owsservices.WFSInfoWrapper() # WFSInfoWrapper | Body of the WFS settings layer
 workspace = 'workspace_example' # str | The workspace name
 
 try:
@@ -1271,7 +1271,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**WFSInfo**](WFSInfo.md)| Body of the WFS settings layer | 
+ **body** | [**WFSInfoWrapper**](WFSInfoWrapper.md)| Body of the WFS settings layer | 
  **workspace** | **str**| The workspace name | 
 
 ### Return type
@@ -1306,7 +1306,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = gs_rest_api_owsservices.DefaultApi()
-body = gs_rest_api_owsservices.WMSInfo() # WMSInfo | Body of the WMS settings
+body = gs_rest_api_owsservices.WMSInfoWrapper() # WMSInfoWrapper | Body of the WMS settings
 
 try:
     api_instance.put_wms_settings(body)
@@ -1318,7 +1318,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**WMSInfo**](WMSInfo.md)| Body of the WMS settings | 
+ **body** | [**WMSInfoWrapper**](WMSInfoWrapper.md)| Body of the WMS settings | 
 
 ### Return type
 
@@ -1352,7 +1352,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = gs_rest_api_owsservices.DefaultApi()
-body = gs_rest_api_owsservices.WMSInfo() # WMSInfo | Body of the WMS settings
+body = gs_rest_api_owsservices.WMSInfoWrapper() # WMSInfoWrapper | Body of the WMS settings
 workspace = 'workspace_example' # str | The workspace name
 
 try:
@@ -1365,7 +1365,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**WMSInfo**](WMSInfo.md)| Body of the WMS settings | 
+ **body** | [**WMSInfoWrapper**](WMSInfoWrapper.md)| Body of the WMS settings | 
  **workspace** | **str**| The workspace name | 
 
 ### Return type
@@ -1400,7 +1400,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = gs_rest_api_owsservices.DefaultApi()
-body = gs_rest_api_owsservices.WMTSInfo() # WMTSInfo | Body of the WMTS settings
+body = gs_rest_api_owsservices.WMTSInfoWrapper() # WMTSInfoWrapper | Body of the WMTS settings
 
 try:
     api_instance.put_wmts_settings(body)
@@ -1412,7 +1412,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**WMTSInfo**](WMTSInfo.md)| Body of the WMTS settings | 
+ **body** | [**WMTSInfoWrapper**](WMTSInfoWrapper.md)| Body of the WMTS settings | 
 
 ### Return type
 
@@ -1446,7 +1446,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = gs_rest_api_owsservices.DefaultApi()
-body = gs_rest_api_owsservices.WMTSInfo() # WMTSInfo | Body of the WMTS settings
+body = gs_rest_api_owsservices.WMTSInfoWrapper() # WMTSInfoWrapper | Body of the WMTS settings
 workspace = 'workspace_example' # str | The workspace name
 
 try:
@@ -1459,7 +1459,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**WMTSInfo**](WMTSInfo.md)| Body of the WMTS settings | 
+ **body** | [**WMTSInfoWrapper**](WMTSInfoWrapper.md)| Body of the WMTS settings | 
  **workspace** | **str**| The workspace name | 
 
 ### Return type

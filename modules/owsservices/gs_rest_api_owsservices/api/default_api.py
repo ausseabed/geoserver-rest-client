@@ -738,7 +738,7 @@ class DefaultApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :return: WCSInfo
+        :return: WCSInfoWrapper
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -759,7 +759,7 @@ class DefaultApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :return: WCSInfo
+        :return: WCSInfoWrapper
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -807,7 +807,7 @@ class DefaultApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='WCSInfo',  # noqa: E501
+            response_type='WCSInfoWrapper',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -826,7 +826,7 @@ class DefaultApi(object):
 
         :param async_req bool
         :param str workspace: The workspace name (required)
-        :return: WCSInfo
+        :return: WCSInfoWrapper
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -848,7 +848,7 @@ class DefaultApi(object):
 
         :param async_req bool
         :param str workspace: The workspace name (required)
-        :return: WCSInfo
+        :return: WCSInfoWrapper
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -902,7 +902,7 @@ class DefaultApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='WCSInfo',  # noqa: E501
+            response_type='WCSInfoWrapper',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -920,7 +920,7 @@ class DefaultApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :return: WFSInfo
+        :return: WFSInfoWrapper
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -941,7 +941,7 @@ class DefaultApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :return: WFSInfo
+        :return: WFSInfoWrapper
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -989,7 +989,7 @@ class DefaultApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='WFSInfo',  # noqa: E501
+            response_type='WFSInfoWrapper',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -1008,7 +1008,7 @@ class DefaultApi(object):
 
         :param async_req bool
         :param str workspace: The workspace name (required)
-        :return: WFSInfo
+        :return: WFSInfoWrapper
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1030,7 +1030,7 @@ class DefaultApi(object):
 
         :param async_req bool
         :param str workspace: The workspace name (required)
-        :return: WFSInfo
+        :return: WFSInfoWrapper
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1084,7 +1084,7 @@ class DefaultApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='WFSInfo',  # noqa: E501
+            response_type='WFSInfoWrapper',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -1102,7 +1102,7 @@ class DefaultApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :return: WMSInfo
+        :return: WMSInfoWrapper
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1123,7 +1123,7 @@ class DefaultApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :return: WMSInfo
+        :return: WMSInfoWrapper
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1171,7 +1171,7 @@ class DefaultApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='WMSInfo',  # noqa: E501
+            response_type='WMSInfoWrapper',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -1190,7 +1190,7 @@ class DefaultApi(object):
 
         :param async_req bool
         :param str workspace: The workspace name (required)
-        :return: WMSInfo
+        :return: WMSInfoWrapper
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1212,7 +1212,7 @@ class DefaultApi(object):
 
         :param async_req bool
         :param str workspace: The workspace name (required)
-        :return: WMSInfo
+        :return: WMSInfoWrapper
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1266,7 +1266,7 @@ class DefaultApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='WMSInfo',  # noqa: E501
+            response_type='WMSInfoWrapper',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -1284,7 +1284,7 @@ class DefaultApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :return: WMTSInfo
+        :return: WMTSInfoWrapper
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1305,7 +1305,7 @@ class DefaultApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :return: WMTSInfo
+        :return: WMTSInfoWrapper
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1353,7 +1353,7 @@ class DefaultApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='WMTSInfo',  # noqa: E501
+            response_type='WMTSInfoWrapper',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -1372,7 +1372,7 @@ class DefaultApi(object):
 
         :param async_req bool
         :param str workspace: The workspace name (required)
-        :return: WMTSInfo
+        :return: WMTSInfoWrapper
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1394,7 +1394,7 @@ class DefaultApi(object):
 
         :param async_req bool
         :param str workspace: The workspace name (required)
-        :return: WMTSInfo
+        :return: WMTSInfoWrapper
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1448,7 +1448,7 @@ class DefaultApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='WMTSInfo',  # noqa: E501
+            response_type='WMTSInfoWrapper',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -2162,7 +2162,7 @@ class DefaultApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param WCSInfo body: Body of the WCS settings (required)
+        :param WCSInfoWrapper body: Body of the WCS settings (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -2184,7 +2184,7 @@ class DefaultApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param WCSInfo body: Body of the WCS settings (required)
+        :param WCSInfoWrapper body: Body of the WCS settings (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -2257,7 +2257,7 @@ class DefaultApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param WCSInfo body: Body of the WCS settings (required)
+        :param WCSInfoWrapper body: Body of the WCS settings (required)
         :param str workspace: The workspace name (required)
         :return: None
                  If the method is called asynchronously,
@@ -2280,7 +2280,7 @@ class DefaultApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param WCSInfo body: Body of the WCS settings (required)
+        :param WCSInfoWrapper body: Body of the WCS settings (required)
         :param str workspace: The workspace name (required)
         :return: None
                  If the method is called asynchronously,
@@ -2360,7 +2360,7 @@ class DefaultApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param WFSInfo body: Body of the WFS settings (required)
+        :param WFSInfoWrapper body: Body of the WFS settings (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -2382,7 +2382,7 @@ class DefaultApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param WFSInfo body: Body of the WFS settings (required)
+        :param WFSInfoWrapper body: Body of the WFS settings (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -2455,7 +2455,7 @@ class DefaultApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param WFSInfo body: Body of the WFS settings layer (required)
+        :param WFSInfoWrapper body: Body of the WFS settings layer (required)
         :param str workspace: The workspace name (required)
         :return: None
                  If the method is called asynchronously,
@@ -2478,7 +2478,7 @@ class DefaultApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param WFSInfo body: Body of the WFS settings layer (required)
+        :param WFSInfoWrapper body: Body of the WFS settings layer (required)
         :param str workspace: The workspace name (required)
         :return: None
                  If the method is called asynchronously,
@@ -2558,7 +2558,7 @@ class DefaultApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param WMSInfo body: Body of the WMS settings (required)
+        :param WMSInfoWrapper body: Body of the WMS settings (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -2580,7 +2580,7 @@ class DefaultApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param WMSInfo body: Body of the WMS settings (required)
+        :param WMSInfoWrapper body: Body of the WMS settings (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -2653,7 +2653,7 @@ class DefaultApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param WMSInfo body: Body of the WMS settings (required)
+        :param WMSInfoWrapper body: Body of the WMS settings (required)
         :param str workspace: The workspace name (required)
         :return: None
                  If the method is called asynchronously,
@@ -2676,7 +2676,7 @@ class DefaultApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param WMSInfo body: Body of the WMS settings (required)
+        :param WMSInfoWrapper body: Body of the WMS settings (required)
         :param str workspace: The workspace name (required)
         :return: None
                  If the method is called asynchronously,
@@ -2756,7 +2756,7 @@ class DefaultApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param WMTSInfo body: Body of the WMTS settings (required)
+        :param WMTSInfoWrapper body: Body of the WMTS settings (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -2778,7 +2778,7 @@ class DefaultApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param WMTSInfo body: Body of the WMTS settings (required)
+        :param WMTSInfoWrapper body: Body of the WMTS settings (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -2851,7 +2851,7 @@ class DefaultApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param WMTSInfo body: Body of the WMTS settings (required)
+        :param WMTSInfoWrapper body: Body of the WMTS settings (required)
         :param str workspace: The workspace name (required)
         :return: None
                  If the method is called asynchronously,
@@ -2874,7 +2874,7 @@ class DefaultApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param WMTSInfo body: Body of the WMTS settings (required)
+        :param WMTSInfoWrapper body: Body of the WMTS settings (required)
         :param str workspace: The workspace name (required)
         :return: None
                  If the method is called asynchronously,

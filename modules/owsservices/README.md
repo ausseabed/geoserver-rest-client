@@ -266,7 +266,7 @@ except ApiException as e:
 
 # create an instance of the API class
 api_instance = gs_rest_api_owsservices.DefaultApi(gs_rest_api_owsservices.ApiClient(configuration))
-body = gs_rest_api_owsservices.WCSInfo() # WCSInfo | Body of the WCS settings
+body = gs_rest_api_owsservices.WCSInfoWrapper() # WCSInfoWrapper | Body of the WCS settings
 
 try:
     api_instance.put_wcs_settings(body)
@@ -275,7 +275,7 @@ except ApiException as e:
 
 # create an instance of the API class
 api_instance = gs_rest_api_owsservices.DefaultApi(gs_rest_api_owsservices.ApiClient(configuration))
-body = gs_rest_api_owsservices.WCSInfo() # WCSInfo | Body of the WCS settings
+body = gs_rest_api_owsservices.WCSInfoWrapper() # WCSInfoWrapper | Body of the WCS settings
 workspace = 'workspace_example' # str | The workspace name
 
 try:
@@ -285,7 +285,7 @@ except ApiException as e:
 
 # create an instance of the API class
 api_instance = gs_rest_api_owsservices.DefaultApi(gs_rest_api_owsservices.ApiClient(configuration))
-body = gs_rest_api_owsservices.WFSInfo() # WFSInfo | Body of the WFS settings
+body = gs_rest_api_owsservices.WFSInfoWrapper() # WFSInfoWrapper | Body of the WFS settings
 
 try:
     api_instance.put_wfs_settings(body)
@@ -294,7 +294,7 @@ except ApiException as e:
 
 # create an instance of the API class
 api_instance = gs_rest_api_owsservices.DefaultApi(gs_rest_api_owsservices.ApiClient(configuration))
-body = gs_rest_api_owsservices.WFSInfo() # WFSInfo | Body of the WFS settings layer
+body = gs_rest_api_owsservices.WFSInfoWrapper() # WFSInfoWrapper | Body of the WFS settings layer
 workspace = 'workspace_example' # str | The workspace name
 
 try:
@@ -304,7 +304,7 @@ except ApiException as e:
 
 # create an instance of the API class
 api_instance = gs_rest_api_owsservices.DefaultApi(gs_rest_api_owsservices.ApiClient(configuration))
-body = gs_rest_api_owsservices.WMSInfo() # WMSInfo | Body of the WMS settings
+body = gs_rest_api_owsservices.WMSInfoWrapper() # WMSInfoWrapper | Body of the WMS settings
 
 try:
     api_instance.put_wms_settings(body)
@@ -313,7 +313,7 @@ except ApiException as e:
 
 # create an instance of the API class
 api_instance = gs_rest_api_owsservices.DefaultApi(gs_rest_api_owsservices.ApiClient(configuration))
-body = gs_rest_api_owsservices.WMSInfo() # WMSInfo | Body of the WMS settings
+body = gs_rest_api_owsservices.WMSInfoWrapper() # WMSInfoWrapper | Body of the WMS settings
 workspace = 'workspace_example' # str | The workspace name
 
 try:
@@ -323,7 +323,7 @@ except ApiException as e:
 
 # create an instance of the API class
 api_instance = gs_rest_api_owsservices.DefaultApi(gs_rest_api_owsservices.ApiClient(configuration))
-body = gs_rest_api_owsservices.WMTSInfo() # WMTSInfo | Body of the WMTS settings
+body = gs_rest_api_owsservices.WMTSInfoWrapper() # WMTSInfoWrapper | Body of the WMTS settings
 
 try:
     api_instance.put_wmts_settings(body)
@@ -332,7 +332,7 @@ except ApiException as e:
 
 # create an instance of the API class
 api_instance = gs_rest_api_owsservices.DefaultApi(gs_rest_api_owsservices.ApiClient(configuration))
-body = gs_rest_api_owsservices.WMTSInfo() # WMTSInfo | Body of the WMTS settings
+body = gs_rest_api_owsservices.WMTSInfoWrapper() # WMTSInfoWrapper | Body of the WMTS settings
 workspace = 'workspace_example' # str | The workspace name
 
 try:
@@ -383,9 +383,13 @@ Class | Method | HTTP request | Description
 ## Documentation For Models
 
  - [WCSInfo](docs/WCSInfo.md)
+ - [WCSInfoWrapper](docs/WCSInfoWrapper.md)
  - [WFSInfo](docs/WFSInfo.md)
+ - [WFSInfoWrapper](docs/WFSInfoWrapper.md)
  - [WMSInfo](docs/WMSInfo.md)
+ - [WMSInfoWrapper](docs/WMSInfoWrapper.md)
  - [WMTSInfo](docs/WMTSInfo.md)
+ - [WMTSInfoWrapper](docs/WMTSInfoWrapper.md)
 
 ## Documentation For Authorization
 

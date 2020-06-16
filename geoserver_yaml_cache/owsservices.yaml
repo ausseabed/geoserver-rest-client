@@ -1,20 +1,18 @@
 ---
-swagger: '2.0'
+swagger: "2.0"
 info:
   version: 1.0.0
   title: OWS Services
   description: An OWS service refers to any of the OGC services that GeoServer supports, such as WFS, WMS, and WCS. These endpoints controls the settings of these services.
   contact:
     name: GeoServer
-    email: 'geoserver-users@sourceforge.net'
-    url: 'http://geoserver.org/comm/'
+    email: "geoserver-users@sourceforge.net"
+    url: "http://geoserver.org/comm/"
 host: localhost:8080
 basePath: /geoserver/rest
 
 paths:
-
   /services/wms/settings:
-
     get:
       operationId: getWMSSettings
       description: Retrieves Web Map Service settings globally for the server.
@@ -26,7 +24,7 @@ paths:
         200:
           description: OK
           schema:
-            $ref: "#/definitions/WMSInfo"
+            $ref: "#/definitions/WMSInfoWrapper"
           examples:
             application/xml: |
               <wms>
@@ -149,7 +147,7 @@ paths:
           description: Body of the WMS settings
           required: true
           schema:
-            $ref: "#/definitions/WMSInfo"
+            $ref: "#/definitions/WMSInfoWrapper"
       consumes:
         - application/xml
         - application/json
@@ -163,7 +161,6 @@ paths:
       responses:
         405:
           description: Method Not Allowed
-
 
   /services/wms/workspaces/{workspace}/settings:
     parameters:
@@ -183,7 +180,7 @@ paths:
         200:
           description: OK
           schema:
-            $ref: "#/definitions/WMSInfo"
+            $ref: "#/definitions/WMSInfoWrapper"
           examples:
             application/xml: |
               <wms>
@@ -312,7 +309,7 @@ paths:
           description: Body of the WMS settings
           required: true
           schema:
-            $ref: "#/definitions/WMSInfo"
+            $ref: "#/definitions/WMSInfoWrapper"
       consumes:
         - application/xml
         - application/json
@@ -327,9 +324,7 @@ paths:
         200:
           description: OK
 
-
   /services/wfs/settings:
-
     get:
       operationId: getWFSSettings
       description: Retrieves Web Feature Service settings globally for the server.
@@ -341,7 +336,7 @@ paths:
         200:
           description: OK
           schema:
-            $ref: "#/definitions/WFSInfo"
+            $ref: "#/definitions/WFSInfoWrapper"
           examples:
             application/xml: |
               <wfs>
@@ -494,7 +489,7 @@ paths:
           description: Body of the WFS settings
           required: true
           schema:
-            $ref: "#/definitions/WFSInfo"
+            $ref: "#/definitions/WFSInfoWrapper"
       consumes:
         - application/xml
         - application/json
@@ -508,7 +503,6 @@ paths:
       responses:
         405:
           description: Method Not Allowed
-
 
   /services/wfs/workspaces/{workspace}/settings:
     parameters:
@@ -528,7 +522,7 @@ paths:
         200:
           description: OK
           schema:
-            $ref: "#/definitions/WFSInfo"
+            $ref: "#/definitions/WFSInfoWrapper"
           examples:
             application/xml: |
               <wfs>
@@ -687,7 +681,7 @@ paths:
           description: Body of the WFS settings layer
           required: true
           schema:
-            $ref: "#/definitions/WFSInfo"
+            $ref: "#/definitions/WFSInfoWrapper"
       consumes:
         - application/xml
         - application/json
@@ -702,9 +696,7 @@ paths:
         200:
           description: OK
 
-
   /services/wcs/settings:
-
     get:
       operationId: getWCSSettings
       description: Retrieves Web Coverage Service settings globally for the server.
@@ -716,7 +708,7 @@ paths:
         200:
           description: OK
           schema:
-            $ref: "#/definitions/WCSInfo"
+            $ref: "#/definitions/WCSInfoWrapper"
           examples:
             application/xml: |
               <wcs>
@@ -805,7 +797,6 @@ paths:
                 }
               }
 
-
     post:
       operationId: postWCSSettings
       description: Invalid. Use PUT to edit a service setting.
@@ -822,7 +813,7 @@ paths:
           description: Body of the WCS settings
           required: true
           schema:
-            $ref: "#/definitions/WCSInfo"
+            $ref: "#/definitions/WCSInfoWrapper"
       consumes:
         - application/xml
         - application/json
@@ -836,7 +827,6 @@ paths:
       responses:
         405:
           description: Method Not Allowed
-
 
   /services/wcs/workspaces/{workspace}/settings:
     parameters:
@@ -856,7 +846,7 @@ paths:
         200:
           description: OK
           schema:
-            $ref: "#/definitions/WCSInfo"
+            $ref: "#/definitions/WCSInfoWrapper"
           examples:
             application/xml: |
               <wcs>
@@ -954,7 +944,6 @@ paths:
                 }
               }
 
-
     post:
       operationId: postWCSWorkspaceSettings
       description: Invalid. Use PUT to edit a service setting.
@@ -971,7 +960,7 @@ paths:
           description: Body of the WCS settings
           required: true
           schema:
-            $ref: "#/definitions/WCSInfo"
+            $ref: "#/definitions/WCSInfoWrapper"
       consumes:
         - application/xml
         - application/json
@@ -998,7 +987,7 @@ paths:
         200:
           description: OK
           schema:
-            $ref: "#/definitions/WMTSInfo"
+            $ref: "#/definitions/WMTSInfoWrapper"
           examples:
             application/xml: |
               <wmts>
@@ -1078,7 +1067,7 @@ paths:
           description: Body of the WMTS settings
           required: true
           schema:
-            $ref: "#/definitions/WMTSInfo"
+            $ref: "#/definitions/WMTSInfoWrapper"
       consumes:
         - application/xml
         - application/json
@@ -1092,7 +1081,6 @@ paths:
       responses:
         405:
           description: Method Not Allowed
-
 
   /services/wmts/workspaces/{workspace}/settings:
     parameters:
@@ -1112,7 +1100,7 @@ paths:
         200:
           description: OK
           schema:
-            $ref: "#/definitions/WMTSInfo"
+            $ref: "#/definitions/WMTSInfoWrapper"
           examples:
             application/xml: |
               <wmts>
@@ -1183,7 +1171,6 @@ paths:
                 }
               }
 
-
     post:
       operationId: postWMTSWorkspaceSettings
       description: Invalid. Use PUT to edit a service setting.
@@ -1200,7 +1187,7 @@ paths:
           description: Body of the WMTS settings
           required: true
           schema:
-            $ref: "#/definitions/WMTSInfo"
+            $ref: "#/definitions/WMTSInfoWrapper"
       consumes:
         - application/xml
         - application/json
@@ -1214,11 +1201,14 @@ paths:
         200:
           description: OK
 
-
 definitions:
+  WMSInfoWrapper:
+    type: object
+    properties:
+      wms:
+        type: object
+        $ref: "#/definitions/WMSInfo"
   WMSInfo:
-    xml:
-      name: wms
     type: object
     properties:
       enabled:
@@ -1241,10 +1231,10 @@ definitions:
         description: description of the service
       accessConstraints:
         type: string
-        description: ''
+        description: ""
       fees:
         type: string
-        description: ''
+        description: ""
       versions:
         type: object
         description: The versions of the service that are available.
@@ -1264,7 +1254,7 @@ definitions:
         description: Status of service CITE compliance.
       onlineResource:
         type: string
-        description: ''
+        description: ""
       schemaBaseURL:
         type: string
         description: The base url for the schemas describing the service.
@@ -1332,11 +1322,14 @@ definitions:
       maxRenderingErrors:
         type: integer
         description: Max number of rendering errors that will be tolerated before stating the rendering operation failed by throwing a service exception back to the client
-
+  WFSInfoWrapper:
+    type: object
+    properties:
+      wfs:
+        type: object
+        $ref: "#/definitions/WFSInfo"
   WFSInfo:
     type: object
-    xml:
-      name: wfs
     properties:
       enabled:
         type: boolean
@@ -1382,8 +1375,8 @@ definitions:
               type: string
               description: Metadata key
               enum:
-              - svgAntiAlias
-              - svgRenderer
+                - svgAntiAlias
+                - svgRenderer
             text:
               type: string
               description: Metadata value
@@ -1394,7 +1387,7 @@ definitions:
         type: string
         description: URL resource
       schemaBaseURL:
-        type: string 
+        type: string
         description: Base URL for the schemas describing the service
       verbose:
         type: boolean
@@ -1450,12 +1443,14 @@ definitions:
       hitsIgnoreMaxFeatures:
         type: boolean
         description: Flag that determines if WFS hit requests (counts) will ignore the maximum features limit for this server
-
-
+  WCSInfoWrapper:
+    type: object
+    properties:
+      wcs:
+        type: object
+        $ref: "#/definitions/WCSInfo"
   WCSInfo:
     type: object
-    xml:
-      name: wcs
     properties:
       enabled:
         type: boolean
@@ -1510,7 +1505,7 @@ definitions:
         type: string
         description: URL resource
       schemaBaseURL:
-        type: string 
+        type: string
         description: Base URL for the schemas describing the service
       verbose:
         type: boolean
@@ -1527,11 +1522,14 @@ definitions:
       maxOutputMemory:
         type: boolean
         description: ""
-
+  WMTSInfoWrapper:
+    type: object
+    properties:
+      wmts:
+        type: object
+        $ref: "#/definitions/WMTSInfo"
   WMTSInfo:
     type: object
-    xml:
-      name: wmts
     properties:
       enabled:
         type: boolean
@@ -1586,7 +1584,7 @@ definitions:
         type: string
         description: URL resource
       schemaBaseURL:
-        type: string 
+        type: string
         description: Base URL for the schemas describing the service
       verbose:
         type: boolean
