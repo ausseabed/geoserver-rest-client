@@ -1517,10 +1517,10 @@ definitions:
         type: boolean
         description: ""
       maxInputMemory:
-        type: boolean
+        type: integer
         description: ""
       maxOutputMemory:
-        type: boolean
+        type: integer
         description: ""
   WMTSInfoWrapper:
     type: object

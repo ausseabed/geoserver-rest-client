@@ -19,8 +19,8 @@ Name | Type | Description | Notes
 **verbose** | **bool** | Flag indicating if the service should be verbose | [optional] 
 **gml_prefixing** | **bool** |  | [optional] 
 **lat_lon** | **bool** |  | [optional] 
-**max_input_memory** | **bool** |  | [optional] 
-**max_output_memory** | **bool** |  | [optional] 
+**max_input_memory** | **int** |  | [optional] 
+**max_output_memory** | **int** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

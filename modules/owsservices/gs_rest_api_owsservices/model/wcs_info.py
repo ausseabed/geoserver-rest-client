@@ -45,8 +45,8 @@ class WCSInfo(object):
         'verbose': 'bool',
         'gml_prefixing': 'bool',
         'lat_lon': 'bool',
-        'max_input_memory': 'bool',
-        'max_output_memory': 'bool'
+        'max_input_memory': 'int',
+        'max_output_memory': 'int'
     }
 
     attribute_map = {
@@ -496,7 +496,7 @@ class WCSInfo(object):
 
 
         :return: The max_input_memory of this WCSInfo.  # noqa: E501
-        :rtype: bool
+        :rtype: int
         """
         return self._max_input_memory
 
@@ -506,7 +506,7 @@ class WCSInfo(object):
 
 
         :param max_input_memory: The max_input_memory of this WCSInfo.  # noqa: E501
-        :type: bool
+        :type: int
         """
 
         self._max_input_memory = max_input_memory
@@ -517,7 +517,7 @@ class WCSInfo(object):
 
 
         :return: The max_output_memory of this WCSInfo.  # noqa: E501
-        :rtype: bool
+        :rtype: int
         """
         return self._max_output_memory
 
@@ -527,7 +527,7 @@ class WCSInfo(object):
 
 
         :param max_output_memory: The max_output_memory of this WCSInfo.  # noqa: E501
-        :type: bool
+        :type: int
         """
 
         self._max_output_memory = max_output_memory
