@@ -57,7 +57,8 @@ class CoverageInfo(object):
         'linearization_tolerance': 'float',
         'attributes': 'object',
         'dimensions': 'object',
-        'grid': 'object'
+        'grid': 'object',
+        'interpolation_methods': 'object'
     }
 
     attribute_map = {
@@ -89,10 +90,11 @@ class CoverageInfo(object):
         'linearization_tolerance': 'linearizationTolerance',
         'attributes': 'attributes',
         'dimensions': 'dimensions',
-        'grid': 'grid'
+        'grid': 'grid',
+        'interpolation_methods': 'interpolationMethods'
     }
 
-    def __init__(self, name=None, native_name=None, native_format=None, namespace=None, title=None, abstract=None, default_interpolation_method=None, keywords=None, supported_formats=None, metadata_links=None, data_links=None, native_crs=None, srs=None, native_bounding_box=None, lat_lon_bounding_box=None, metadata=None, store=None, cql_filter=None, max_features=None, num_decimals=None, request_srs=None, response_srs=None, overriding_service_srs=None, skip_number_matched=None, circular_arc_present=None, linearization_tolerance=None, attributes=None, dimensions=None, grid=None):  # noqa: E501
+    def __init__(self, name=None, native_name=None, native_format=None, namespace=None, title=None, abstract=None, default_interpolation_method=None, keywords=None, supported_formats=None, metadata_links=None, data_links=None, native_crs=None, srs=None, native_bounding_box=None, lat_lon_bounding_box=None, metadata=None, store=None, cql_filter=None, max_features=None, num_decimals=None, request_srs=None, response_srs=None, overriding_service_srs=None, skip_number_matched=None, circular_arc_present=None, linearization_tolerance=None, attributes=None, dimensions=None, grid=None, interpolation_methods=None):  # noqa: E501
         """CoverageInfo - a model defined in Swagger"""  # noqa: E501
         self._name = None
         self._native_name = None
@@ -123,6 +125,7 @@ class CoverageInfo(object):
         self._attributes = None
         self._dimensions = None
         self._grid = None
+        self._interpolation_methods = None
         self.discriminator = None
         if name is not None:
             self.name = name
@@ -182,6 +185,8 @@ class CoverageInfo(object):
             self.dimensions = dimensions
         if grid is not None:
             self.grid = grid
+        if interpolation_methods is not None:
+            self.interpolation_methods = interpolation_methods
 
     @property
     def name(self):
@@ -847,6 +852,29 @@ class CoverageInfo(object):
         """
 
         self._grid = grid
+
+    @property
+    def interpolation_methods(self):
+        """Gets the interpolation_methods of this CoverageInfo.  # noqa: E501
+
+        available interporlations methods for this coverage  # noqa: E501
+
+        :return: The interpolation_methods of this CoverageInfo.  # noqa: E501
+        :rtype: object
+        """
+        return self._interpolation_methods
+
+    @interpolation_methods.setter
+    def interpolation_methods(self, interpolation_methods):
+        """Sets the interpolation_methods of this CoverageInfo.
+
+        available interporlations methods for this coverage  # noqa: E501
+
+        :param interpolation_methods: The interpolation_methods of this CoverageInfo.  # noqa: E501
+        :type: object
+        """
+
+        self._interpolation_methods = interpolation_methods
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -1157,15 +1157,15 @@ definitions:
               translatexY:
                 type: number
                 description: translation to apply in Y
-          interpolationMethods:
-            type: object
-            description: available interporlations methods for this coverage
-            properties:
-              string:
-                type: array
-                items:
-                  type: string
-                  description: name of the interpolation method
+      interpolationMethods:
+        type: object
+        description: available interporlations methods for this coverage
+        properties:
+          string:
+            type: array
+            items:
+              type: string
+              description: name of the interpolation method
 
     example: {
                  "coverage": {

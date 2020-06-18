@@ -32,6 +32,7 @@ Name | Type | Description | Notes
 **attributes** | **object** | Wrapper for the derived set of attributes for the feature type. | [optional] 
 **dimensions** | **object** | raster dimensions | [optional] 
 **grid** | **object** | contains information about how to translate from the raster plan to a coordinate reference system | [optional] 
+**interpolation_methods** | **object** | available interporlations methods for this coverage | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
