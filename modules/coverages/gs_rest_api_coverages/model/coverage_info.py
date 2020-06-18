@@ -49,6 +49,7 @@ class CoverageInfo(object):
         'cql_filter': 'str',
         'max_features': 'int',
         'num_decimals': 'float',
+        'request_srs': 'object',
         'response_srs': 'object',
         'overriding_service_srs': 'bool',
         'skip_number_matched': 'bool',
@@ -80,6 +81,7 @@ class CoverageInfo(object):
         'cql_filter': 'cqlFilter',
         'max_features': 'maxFeatures',
         'num_decimals': 'numDecimals',
+        'request_srs': 'requestSRS',
         'response_srs': 'responseSRS',
         'overriding_service_srs': 'overridingServiceSRS',
         'skip_number_matched': 'skipNumberMatched',
@@ -90,7 +92,7 @@ class CoverageInfo(object):
         'grid': 'grid'
     }
 
-    def __init__(self, name=None, native_name=None, native_format=None, namespace=None, title=None, abstract=None, default_interpolation_method=None, keywords=None, supported_formats=None, metadata_links=None, data_links=None, native_crs=None, srs=None, native_bounding_box=None, lat_lon_bounding_box=None, metadata=None, store=None, cql_filter=None, max_features=None, num_decimals=None, response_srs=None, overriding_service_srs=None, skip_number_matched=None, circular_arc_present=None, linearization_tolerance=None, attributes=None, dimensions=None, grid=None):  # noqa: E501
+    def __init__(self, name=None, native_name=None, native_format=None, namespace=None, title=None, abstract=None, default_interpolation_method=None, keywords=None, supported_formats=None, metadata_links=None, data_links=None, native_crs=None, srs=None, native_bounding_box=None, lat_lon_bounding_box=None, metadata=None, store=None, cql_filter=None, max_features=None, num_decimals=None, request_srs=None, response_srs=None, overriding_service_srs=None, skip_number_matched=None, circular_arc_present=None, linearization_tolerance=None, attributes=None, dimensions=None, grid=None):  # noqa: E501
         """CoverageInfo - a model defined in Swagger"""  # noqa: E501
         self._name = None
         self._native_name = None
@@ -112,6 +114,7 @@ class CoverageInfo(object):
         self._cql_filter = None
         self._max_features = None
         self._num_decimals = None
+        self._request_srs = None
         self._response_srs = None
         self._overriding_service_srs = None
         self._skip_number_matched = None
@@ -161,6 +164,8 @@ class CoverageInfo(object):
             self.max_features = max_features
         if num_decimals is not None:
             self.num_decimals = num_decimals
+        if request_srs is not None:
+            self.request_srs = request_srs
         if response_srs is not None:
             self.response_srs = response_srs
         if overriding_service_srs is not None:
@@ -637,6 +642,29 @@ class CoverageInfo(object):
         """
 
         self._num_decimals = num_decimals
+
+    @property
+    def request_srs(self):
+        """Gets the request_srs of this CoverageInfo.  # noqa: E501
+
+        The srs's that the WFS service will advertise in the capabilities document for this feature type (overriding the global WFS settings).  # noqa: E501
+
+        :return: The request_srs of this CoverageInfo.  # noqa: E501
+        :rtype: object
+        """
+        return self._request_srs
+
+    @request_srs.setter
+    def request_srs(self, request_srs):
+        """Sets the request_srs of this CoverageInfo.
+
+        The srs's that the WFS service will advertise in the capabilities document for this feature type (overriding the global WFS settings).  # noqa: E501
+
+        :param request_srs: The request_srs of this CoverageInfo.  # noqa: E501
+        :type: object
+        """
+
+        self._request_srs = request_srs
 
     @property
     def response_srs(self):

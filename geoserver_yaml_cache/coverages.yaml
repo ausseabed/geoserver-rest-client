@@ -1035,6 +1035,13 @@ definitions:
       numDecimals:
         type: number
         description: The number of decimal places to use when encoding floating point numbers from data of this feature type.
+      requestSRS:
+        type: object
+        description: The srs's that the WFS service will advertise in the capabilities document for this feature type (overriding the global WFS settings).
+        properties:
+          string:
+            type: string
+            description: The value of the srs
       responseSRS:
         type: object
         description: The srs's that the WFS service will advertise in the capabilities document for this feature type (overriding the global WFS settings).

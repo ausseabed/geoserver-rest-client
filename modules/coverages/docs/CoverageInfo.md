@@ -23,6 +23,7 @@ Name | Type | Description | Notes
 **cql_filter** | **str** | The ECQL string used as default feature type filter | [optional] 
 **max_features** | **int** | A cap on the number of features that a query against this type can return. | [optional] 
 **num_decimals** | **float** | The number of decimal places to use when encoding floating point numbers from data of this feature type. | [optional] 
+**request_srs** | **object** | The srs&#x27;s that the WFS service will advertise in the capabilities document for this feature type (overriding the global WFS settings). | [optional] 
 **response_srs** | **object** | The srs&#x27;s that the WFS service will advertise in the capabilities document for this feature type (overriding the global WFS settings). | [optional] 
 **overriding_service_srs** | **bool** | True if this feature type info is overriding the WFS global SRS list | [optional] 
 **skip_number_matched** | **bool** | True if this feature type info is overriding the counting of numberMatched. | [optional] 
