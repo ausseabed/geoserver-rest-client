@@ -976,6 +976,12 @@ components:
           link:
             type: string
             description: URL to data store definition
+    datastoreWrapper:
+      title: datastoreWrapper
+      type: object
+      properties:
+        dataStore:
+          $ref: "#/components/schemas/datastore"
     datastore:
       title: datastore
       type: object
@@ -1303,7 +1309,7 @@ components:
       content:
         "*/*":
           schema:
-            $ref: "#/components/schemas/datastore"
+            $ref: "#/components/schemas/datastoreWrapper"
       required: true
     dataStorePut:
       description:

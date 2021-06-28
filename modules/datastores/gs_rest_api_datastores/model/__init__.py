@@ -17,5 +17,6 @@ from __future__ import absolute_import
 from gs_rest_api_datastores.model.data_store_response import DataStoreResponse
 from gs_rest_api_datastores.model.datastore import Datastore
 from gs_rest_api_datastores.model.datastore1 import Datastore1
+from gs_rest_api_datastores.model.datastore_wrapper import DatastoreWrapper
 from gs_rest_api_datastores.model.entry import Entry
 from gs_rest_api_datastores.model.workspace import Workspace

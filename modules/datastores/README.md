@@ -790,6 +790,7 @@ Class | Method | HTTP request | Description
  - [DataStoreResponse](docs/DataStoreResponse.md)
  - [Datastore](docs/Datastore.md)
  - [Datastore1](docs/Datastore1.md)
+ - [DatastoreWrapper](docs/DatastoreWrapper.md)
  - [Entry](docs/Entry.md)
  - [Workspace](docs/Workspace.md)
 
