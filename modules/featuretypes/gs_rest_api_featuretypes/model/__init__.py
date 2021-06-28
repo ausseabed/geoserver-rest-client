@@ -15,4 +15,5 @@ from __future__ import absolute_import
 
 # import models into model package
 from gs_rest_api_featuretypes.model.feature_type_info import FeatureTypeInfo
+from gs_rest_api_featuretypes.model.feature_type_info_wrapper import FeatureTypeInfoWrapper
 from gs_rest_api_featuretypes.model.metadata_entry import MetadataEntry

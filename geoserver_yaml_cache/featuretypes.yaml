@@ -133,7 +133,7 @@ paths:
           description: The body of the feature type to POST
           required: true
           schema:
-            $ref: "#/definitions/FeatureTypeInfo"
+            $ref: "#/definitions/FeatureTypeInfoWrapper"
       consumes:
         - application/xml
         - application/json
@@ -258,7 +258,7 @@ paths:
           description: The body of the feature type to POST
           required: true
           schema:
-            $ref: "#/definitions/FeatureTypeInfo"
+            $ref: "#/definitions/FeatureTypeInfoWrapper"
       consumes:
         - application/xml
         - application/json
@@ -1021,6 +1021,12 @@ paths:
           description: The feature type was successfully deleted.
 
 definitions:
+  FeatureTypeInfoWrapper:
+    type: object
+    properties:
+      featureType:
+        $ref: "#/definitions/FeatureTypeInfo"
+
   FeatureTypeInfo:
     type: object
     properties:

@@ -21,4 +21,5 @@ from gs_rest_api_featuretypes.api_client import ApiClient
 from gs_rest_api_featuretypes.configuration import Configuration
 # import models into sdk package
 from gs_rest_api_featuretypes.model.feature_type_info import FeatureTypeInfo
+from gs_rest_api_featuretypes.model.feature_type_info_wrapper import FeatureTypeInfoWrapper
 from gs_rest_api_featuretypes.model.metadata_entry import MetadataEntry

@@ -201,7 +201,7 @@ configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
 api_instance = gs_rest_api_featuretypes.DefaultApi(gs_rest_api_featuretypes.ApiClient(configuration))
-body = gs_rest_api_featuretypes.FeatureTypeInfo() # FeatureTypeInfo | The body of the feature type to POST
+body = gs_rest_api_featuretypes.FeatureTypeInfoWrapper() # FeatureTypeInfoWrapper | The body of the feature type to POST
 workspace_name = 'workspace_name_example' # str | The name of the workspace
 store_name = 'store_name_example' # str | The name of the datastore
 
@@ -216,7 +216,7 @@ configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
 api_instance = gs_rest_api_featuretypes.DefaultApi(gs_rest_api_featuretypes.ApiClient(configuration))
-body = gs_rest_api_featuretypes.FeatureTypeInfo() # FeatureTypeInfo | The body of the feature type to POST
+body = gs_rest_api_featuretypes.FeatureTypeInfoWrapper() # FeatureTypeInfoWrapper | The body of the feature type to POST
 workspace_name = 'workspace_name_example' # str | The name of the workspace
 
 try:
@@ -308,6 +308,7 @@ Class | Method | HTTP request | Description
 ## Documentation For Models
 
  - [FeatureTypeInfo](docs/FeatureTypeInfo.md)
+ - [FeatureTypeInfoWrapper](docs/FeatureTypeInfoWrapper.md)
  - [MetadataEntry](docs/MetadataEntry.md)
 
 ## Documentation For Authorization

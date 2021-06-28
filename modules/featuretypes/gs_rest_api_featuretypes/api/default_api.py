@@ -1016,7 +1016,7 @@ class DefaultApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param FeatureTypeInfo body: The body of the feature type to POST (required)
+        :param FeatureTypeInfoWrapper body: The body of the feature type to POST (required)
         :param str workspace_name: The name of the workspace (required)
         :param str store_name: The name of the datastore (required)
         :return: None
@@ -1040,7 +1040,7 @@ class DefaultApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param FeatureTypeInfo body: The body of the feature type to POST (required)
+        :param FeatureTypeInfoWrapper body: The body of the feature type to POST (required)
         :param str workspace_name: The name of the workspace (required)
         :param str store_name: The name of the datastore (required)
         :return: None
@@ -1127,7 +1127,7 @@ class DefaultApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param FeatureTypeInfo body: The body of the feature type to POST (required)
+        :param FeatureTypeInfoWrapper body: The body of the feature type to POST (required)
         :param str workspace_name: The name of the workspace (required)
         :return: None
                  If the method is called asynchronously,
@@ -1150,7 +1150,7 @@ class DefaultApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param FeatureTypeInfo body: The body of the feature type to POST (required)
+        :param FeatureTypeInfoWrapper body: The body of the feature type to POST (required)
         :param str workspace_name: The name of the workspace (required)
         :return: None
                  If the method is called asynchronously,

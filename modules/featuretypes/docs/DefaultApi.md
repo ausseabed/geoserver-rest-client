@@ -556,7 +556,7 @@ configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
 api_instance = gs_rest_api_featuretypes.DefaultApi(gs_rest_api_featuretypes.ApiClient(configuration))
-body = gs_rest_api_featuretypes.FeatureTypeInfo() # FeatureTypeInfo | The body of the feature type to POST
+body = gs_rest_api_featuretypes.FeatureTypeInfoWrapper() # FeatureTypeInfoWrapper | The body of the feature type to POST
 workspace_name = 'workspace_name_example' # str | The name of the workspace
 store_name = 'store_name_example' # str | The name of the datastore
 
@@ -570,7 +570,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**FeatureTypeInfo**](FeatureTypeInfo.md)| The body of the feature type to POST | 
+ **body** | [**FeatureTypeInfoWrapper**](FeatureTypeInfoWrapper.md)| The body of the feature type to POST | 
  **workspace_name** | **str**| The name of the workspace | 
  **store_name** | **str**| The name of the datastore | 
 
@@ -610,7 +610,7 @@ configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
 api_instance = gs_rest_api_featuretypes.DefaultApi(gs_rest_api_featuretypes.ApiClient(configuration))
-body = gs_rest_api_featuretypes.FeatureTypeInfo() # FeatureTypeInfo | The body of the feature type to POST
+body = gs_rest_api_featuretypes.FeatureTypeInfoWrapper() # FeatureTypeInfoWrapper | The body of the feature type to POST
 workspace_name = 'workspace_name_example' # str | The name of the workspace
 
 try:
@@ -623,7 +623,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**FeatureTypeInfo**](FeatureTypeInfo.md)| The body of the feature type to POST | 
+ **body** | [**FeatureTypeInfoWrapper**](FeatureTypeInfoWrapper.md)| The body of the feature type to POST | 
  **workspace_name** | **str**| The name of the workspace | 
 
 ### Return type
