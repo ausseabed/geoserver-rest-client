@@ -36,7 +36,8 @@ class CoverageStoreInfo(object):
         'workspace': 'object',
         'default__': 'bool',
         'url': 'str',
-        'coverages': 'object'
+        'coverages': 'object',
+        'metadata': 'object'
     }
 
     attribute_map = {
@@ -47,10 +48,11 @@ class CoverageStoreInfo(object):
         'workspace': 'workspace',
         'default__': '__default__',
         'url': 'url',
-        'coverages': 'coverages'
+        'coverages': 'coverages',
+        'metadata': 'metadata'
     }
 
-    def __init__(self, name=None, description=None, type=None, enabled=None, workspace=None, default__=None, url=None, coverages=None):  # noqa: E501
+    def __init__(self, name=None, description=None, type=None, enabled=None, workspace=None, default__=None, url=None, coverages=None, metadata=None):  # noqa: E501
         """CoverageStoreInfo - a model defined in Swagger"""  # noqa: E501
         self._name = None
         self._description = None
@@ -60,6 +62,7 @@ class CoverageStoreInfo(object):
         self._default__ = None
         self._url = None
         self._coverages = None
+        self._metadata = None
         self.discriminator = None
         self.name = name
         if description is not None:
@@ -75,6 +78,8 @@ class CoverageStoreInfo(object):
             self.url = url
         if coverages is not None:
             self.coverages = coverages
+        if metadata is not None:
+            self.metadata = metadata
 
     @property
     def name(self):
@@ -261,6 +266,29 @@ class CoverageStoreInfo(object):
         """
 
         self._coverages = coverages
+
+    @property
+    def metadata(self):
+        """Gets the metadata of this CoverageStoreInfo.  # noqa: E501
+
+        Metadata for the coverage store  # noqa: E501
+
+        :return: The metadata of this CoverageStoreInfo.  # noqa: E501
+        :rtype: object
+        """
+        return self._metadata
+
+    @metadata.setter
+    def metadata(self, metadata):
+        """Sets the metadata of this CoverageStoreInfo.
+
+        Metadata for the coverage store  # noqa: E501
+
+        :param metadata: The metadata of this CoverageStoreInfo.  # noqa: E501
+        :type: object
+        """
+
+        self._metadata = metadata
 
     def to_dict(self):
         """Returns the model properties as a dict"""

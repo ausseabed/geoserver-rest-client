@@ -453,6 +453,14 @@ definitions:
           <coverages>
             <atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="alternate" href="http://localhost:8080/geoserver/rest/workspaces/nurc/coveragestores/arcGridSample/coverages.xml" type="application/xml"/>
           </coverages>
+          <metadata>
+            <entry key="CogSettings.Key">
+              <cogSettings>
+                <useCachingStream>false</useCachingStream>
+                <rangeReaderSettings>S3</rangeReaderSettings>
+              </cogSettings>
+            </entry>
+          </metadata>
         </coverageStore>      
         
     properties:
@@ -491,6 +499,27 @@ definitions:
           link:
             type: string
             description: A link to the list of coverages contained in this store
+      metadata:
+        type: object
+        description: Metadata for the coverage store
+        properties:
+          entry:
+            type: object
+            properties:
+              '@key':
+                title: key
+                type: string
+                enum:
+                - CogSettings.Key
+              cogSettings:
+                type: object
+                properties:
+                  useCachingStream:
+                    type: boolean
+                    description: Whether to use caching stream
+                  rangeReaderSettings:
+                    type: string
+                    description: Range reader settings
   CoverageStoreListItem:
     type: object
     properties:
